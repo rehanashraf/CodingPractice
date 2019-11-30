@@ -7,9 +7,13 @@
 //
 
 #include <iostream>
+#include "main.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
+int main(int argc, const char * argv[])
+{
     std::cout << "Hello, World!\n";
+
+    // insert code here...
+
     return 0;
 }

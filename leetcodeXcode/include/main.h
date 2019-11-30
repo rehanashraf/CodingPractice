@@ -10,5 +10,6 @@
 #define main_h
 
 bool runTwoSum();
+bool runAddTwoNumbers();
 
 #endif /* main_h */
