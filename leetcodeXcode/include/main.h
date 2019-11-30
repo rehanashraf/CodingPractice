@@ -1,12 +1,14 @@
-/*
- * main.h
- *
- *  Created on: Nov 26, 2019
- *      Author: rehanashraf
- */
+//
+//  main.h
+//  leetcodeXcode
+//
+//  Created by Rehan Ashraf on 11/29/19.
+//  Copyright © 2019 Rehan Ashraf. All rights reserved.
+//
 
-#ifndef MAIN_H_
-#define MAIN_H_
+#ifndef main_h
+#define main_h
 
+bool runTwoSum();
 
-#endif /* MAIN_H_ */
+#endif /* main_h */
