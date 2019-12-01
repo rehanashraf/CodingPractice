@@ -78,3 +78,10 @@ local.properties
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 # End of https://www.gitignore.io/api/eclipse
+leetcodeXcode/source/.DS_Store
+*.xcbkptlist
+*.xcuserstate
+*.pbxproj
+.DS_Store
+*.pbxproj
+*.xcuserstate

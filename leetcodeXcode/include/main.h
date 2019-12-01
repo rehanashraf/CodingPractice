@@ -11,5 +11,6 @@
 
 bool runTwoSum();
 bool runAddTwoNumbers();
+bool runlengthOfLongestSubstring();
 
 #endif /* main_h */
