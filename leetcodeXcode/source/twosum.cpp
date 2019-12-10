@@ -14,11 +14,13 @@ Given nums = [2, 7, 11, 15], target = 9,
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 */
+#include <stdio.h>
 
 #include <vector>
 #include <iostream>
-#include <stdio.h>
 using namespace std;
+
+#include "print.h"
 
 vector<int> twoSum(vector<int>& nums, int target)
 {
@@ -39,17 +41,6 @@ vector<int> twoSum(vector<int>& nums, int target)
     }
 
     return rv;
-}
-
-void printVector(vector<int>& list)
-{
-    std::vector<int>::iterator it;
-    std::cout << "Vector contains:";
-
-    for (it=list.begin(); it<list.end(); it++)
-        std::cout << ' ' << *it;
-
-    std::cout << '\n';
 }
 
 bool runTwoSum()
