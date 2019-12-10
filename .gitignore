@@ -71,6 +71,7 @@ local.properties
 
 .sts4-cache/
 
+#Xcode Project
 */.DS_Store
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
@@ -85,3 +86,8 @@ leetcodeXcode/source/.DS_Store
 .DS_Store
 *.pbxproj
 *.xcuserstate
+
+#Python Project
+*/venv/*
+
+
