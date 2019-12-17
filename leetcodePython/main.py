@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #
 # main.py
 #
@@ -6,3 +7,9 @@
 
 if __name__ == "__main__":
     print("In the main.py file")
+=======
+if __name__ == "__main__":
+    print ("Executing directly")
+else:
+    print ("Executing from imported Program")
+>>>>>>> user/rehan

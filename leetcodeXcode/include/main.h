@@ -12,5 +12,6 @@
 bool runTwoSum();
 bool runAddTwoNumbers();
 bool runlengthOfLongestSubstring();
+bool runlongestPalindrome();
 
 #endif /* main_h */
