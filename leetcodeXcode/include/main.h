@@ -13,5 +13,6 @@ bool runTwoSum();
 bool runAddTwoNumbers();
 bool runlengthOfLongestSubstring();
 bool runlongestPalindrome();
+bool runReverse();
 
 #endif /* main_h */

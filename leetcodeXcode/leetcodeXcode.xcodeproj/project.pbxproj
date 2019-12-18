@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E41E3B7E239238C4001FBEE3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41E3B7D239238C4001FBEE3 /* main.cpp */; };
+		E46129E023A9DF6B0056875E /* reverseinteger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129DF23A9DF6B0056875E /* reverseinteger.cpp */; };
 		E4D1AF4823A786280011B3A0 /* twosum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1AF4423A786270011B3A0 /* twosum.cpp */; };
 		E4D1AF4923A786280011B3A0 /* longestsubstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1AF4523A786280011B3A0 /* longestsubstring.cpp */; };
 		E4D1AF4A23A786280011B3A0 /* addtwonumbers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1AF4623A786280011B3A0 /* addtwonumbers.cpp */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		E41E3B7A239238C4001FBEE3 /* leetcodeXcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetcodeXcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41E3B7D239238C4001FBEE3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E46129DF23A9DF6B0056875E /* reverseinteger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = reverseinteger.cpp; sourceTree = "<group>"; };
 		E4D1AF4423A786270011B3A0 /* twosum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = twosum.cpp; sourceTree = "<group>"; };
 		E4D1AF4523A786280011B3A0 /* longestsubstring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = longestsubstring.cpp; sourceTree = "<group>"; };
 		E4D1AF4623A786280011B3A0 /* addtwonumbers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = addtwonumbers.cpp; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				E4D1AF4423A786270011B3A0 /* twosum.cpp */,
 				E41E3B7D239238C4001FBEE3 /* main.cpp */,
 				E4D1AF4E23A786F50011B3A0 /* longestpalindromicsubstring.cpp */,
+				E46129DF23A9DF6B0056875E /* reverseinteger.cpp */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E46129E023A9DF6B0056875E /* reverseinteger.cpp in Sources */,
 				E4D1AF4B23A786280011B3A0 /* print.cpp in Sources */,
 				E4D1AF4823A786280011B3A0 /* twosum.cpp in Sources */,
 				E4D1AF4A23A786280011B3A0 /* addtwonumbers.cpp in Sources */,
