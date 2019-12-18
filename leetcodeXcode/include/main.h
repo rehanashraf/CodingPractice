@@ -14,5 +14,6 @@ bool runAddTwoNumbers();
 bool runlengthOfLongestSubstring();
 bool runlongestPalindrome();
 bool runReverse();
+bool runMyAtoi();
 
 #endif /* main_h */
