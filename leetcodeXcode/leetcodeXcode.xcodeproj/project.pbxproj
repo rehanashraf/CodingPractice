@@ -11,6 +11,8 @@
 		E46129E023A9DF6B0056875E /* reverseinteger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129DF23A9DF6B0056875E /* reverseinteger.cpp */; };
 		E46129E223AA2F7C0056875E /* stringtointeger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129E123AA2F7C0056875E /* stringtointeger.cpp */; };
 		E46129E423AC82FC0056875E /* containerwithmostwater.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129E323AC82FC0056875E /* containerwithmostwater.cpp */; };
+		E46129E623ACB3B10056875E /* playground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129E523ACB3B10056875E /* playground.cpp */; };
+		E46129E923ACB7E60056875E /* romantointeger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129E823ACB7E60056875E /* romantointeger.cpp */; };
 		E4D1AF4823A786280011B3A0 /* twosum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1AF4423A786270011B3A0 /* twosum.cpp */; };
 		E4D1AF4923A786280011B3A0 /* longestsubstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1AF4523A786280011B3A0 /* longestsubstring.cpp */; };
 		E4D1AF4A23A786280011B3A0 /* addtwonumbers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1AF4623A786280011B3A0 /* addtwonumbers.cpp */; };
@@ -36,6 +38,9 @@
 		E46129DF23A9DF6B0056875E /* reverseinteger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = reverseinteger.cpp; sourceTree = "<group>"; };
 		E46129E123AA2F7C0056875E /* stringtointeger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stringtointeger.cpp; sourceTree = "<group>"; };
 		E46129E323AC82FC0056875E /* containerwithmostwater.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = containerwithmostwater.cpp; sourceTree = "<group>"; };
+		E46129E523ACB3B10056875E /* playground.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = playground.cpp; sourceTree = "<group>"; };
+		E46129E723ACB3E10056875E /* playground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = playground.h; sourceTree = "<group>"; };
+		E46129E823ACB7E60056875E /* romantointeger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = romantointeger.cpp; sourceTree = "<group>"; };
 		E4D1AF4423A786270011B3A0 /* twosum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = twosum.cpp; sourceTree = "<group>"; };
 		E4D1AF4523A786280011B3A0 /* longestsubstring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = longestsubstring.cpp; sourceTree = "<group>"; };
 		E4D1AF4623A786280011B3A0 /* addtwonumbers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = addtwonumbers.cpp; sourceTree = "<group>"; };
@@ -85,6 +90,8 @@
 				E46129DF23A9DF6B0056875E /* reverseinteger.cpp */,
 				E46129E123AA2F7C0056875E /* stringtointeger.cpp */,
 				E46129E323AC82FC0056875E /* containerwithmostwater.cpp */,
+				E46129E523ACB3B10056875E /* playground.cpp */,
+				E46129E823ACB7E60056875E /* romantointeger.cpp */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -94,6 +101,7 @@
 			children = (
 				E4D1AF4C23A786340011B3A0 /* main.h */,
 				E4D1AF4D23A786340011B3A0 /* print.h */,
+				E46129E723ACB3E10056875E /* playground.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -155,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E46129E923ACB7E60056875E /* romantointeger.cpp in Sources */,
 				E46129E023A9DF6B0056875E /* reverseinteger.cpp in Sources */,
 				E4D1AF4B23A786280011B3A0 /* print.cpp in Sources */,
 				E4D1AF4823A786280011B3A0 /* twosum.cpp in Sources */,
@@ -163,6 +172,7 @@
 				E46129E223AA2F7C0056875E /* stringtointeger.cpp in Sources */,
 				E4D1AF4F23A786F50011B3A0 /* longestpalindromicsubstring.cpp in Sources */,
 				E41E3B7E239238C4001FBEE3 /* main.cpp in Sources */,
+				E46129E623ACB3B10056875E /* playground.cpp in Sources */,
 				E4D1AF4923A786280011B3A0 /* longestsubstring.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

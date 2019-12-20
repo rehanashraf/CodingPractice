@@ -16,5 +16,6 @@ bool runlongestPalindrome();
 bool runReverse();
 bool runMyAtoi();
 bool runMaxArea();
+bool runRomanToInt();
 
 #endif /* main_h */
