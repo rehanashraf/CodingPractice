@@ -15,5 +15,6 @@ bool runlengthOfLongestSubstring();
 bool runlongestPalindrome();
 bool runReverse();
 bool runMyAtoi();
+bool runMaxArea();
 
 #endif /* main_h */
