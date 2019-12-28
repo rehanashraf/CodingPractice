@@ -17,5 +17,6 @@ bool runReverse();
 bool runMyAtoi();
 bool runMaxArea();
 bool runRomanToInt();
+bool runLongestCommonPrefix();
 
 #endif /* main_h */

@@ -13,6 +13,7 @@
 		E46129E423AC82FC0056875E /* containerwithmostwater.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129E323AC82FC0056875E /* containerwithmostwater.cpp */; };
 		E46129E623ACB3B10056875E /* playground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129E523ACB3B10056875E /* playground.cpp */; };
 		E46129E923ACB7E60056875E /* romantointeger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129E823ACB7E60056875E /* romantointeger.cpp */; };
+		E46129EB23ACBD5D0056875E /* longestcommonprefix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129EA23ACBD5D0056875E /* longestcommonprefix.cpp */; };
 		E4D1AF4823A786280011B3A0 /* twosum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1AF4423A786270011B3A0 /* twosum.cpp */; };
 		E4D1AF4923A786280011B3A0 /* longestsubstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1AF4523A786280011B3A0 /* longestsubstring.cpp */; };
 		E4D1AF4A23A786280011B3A0 /* addtwonumbers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1AF4623A786280011B3A0 /* addtwonumbers.cpp */; };
@@ -41,6 +42,7 @@
 		E46129E523ACB3B10056875E /* playground.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = playground.cpp; sourceTree = "<group>"; };
 		E46129E723ACB3E10056875E /* playground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = playground.h; sourceTree = "<group>"; };
 		E46129E823ACB7E60056875E /* romantointeger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = romantointeger.cpp; sourceTree = "<group>"; };
+		E46129EA23ACBD5D0056875E /* longestcommonprefix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = longestcommonprefix.cpp; sourceTree = "<group>"; };
 		E4D1AF4423A786270011B3A0 /* twosum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = twosum.cpp; sourceTree = "<group>"; };
 		E4D1AF4523A786280011B3A0 /* longestsubstring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = longestsubstring.cpp; sourceTree = "<group>"; };
 		E4D1AF4623A786280011B3A0 /* addtwonumbers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = addtwonumbers.cpp; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				E46129E323AC82FC0056875E /* containerwithmostwater.cpp */,
 				E46129E523ACB3B10056875E /* playground.cpp */,
 				E46129E823ACB7E60056875E /* romantointeger.cpp */,
+				E46129EA23ACBD5D0056875E /* longestcommonprefix.cpp */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -132,7 +135,7 @@
 		E41E3B72239238C4001FBEE3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Rehan Ashraf";
 				TargetAttributes = {
 					E41E3B79239238C4001FBEE3 = {
@@ -174,6 +177,7 @@
 				E41E3B7E239238C4001FBEE3 /* main.cpp in Sources */,
 				E46129E623ACB3B10056875E /* playground.cpp in Sources */,
 				E4D1AF4923A786280011B3A0 /* longestsubstring.cpp in Sources */,
+				E46129EB23ACBD5D0056875E /* longestcommonprefix.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +296,7 @@
 		E41E3B82239238C4001FBEE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EN34P479Z8;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -302,6 +307,7 @@
 		E41E3B83239238C4001FBEE3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EN34P479Z8;
 				ENABLE_HARDENED_RUNTIME = YES;

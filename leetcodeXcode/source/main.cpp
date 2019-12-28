@@ -8,12 +8,14 @@
 
 #include <iostream>
 #include "main.h"
+#include "playground.h"
 
 int main(int argc, const char * argv[])
 {
     std::cout << "Hello, World!\n";
 
     // insert code here...
-
+    runLongestCommonPrefix();
+    
     return 0;
 }

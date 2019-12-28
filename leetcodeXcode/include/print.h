@@ -14,6 +14,8 @@
 #include <iostream>
 #include <vector>
 
+//template <typename T>
 void printVector(std::vector<int>& list);
+void printVector(std::vector<std::string>& list);
 
 #endif /* print_hpp */
