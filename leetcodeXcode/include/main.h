@@ -18,5 +18,6 @@ bool runMyAtoi();
 bool runMaxArea();
 bool runRomanToInt();
 bool runLongestCommonPrefix();
+bool runThreeSum();
 
 #endif /* main_h */

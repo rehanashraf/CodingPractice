@@ -15,7 +15,7 @@ int main(int argc, const char * argv[])
     std::cout << "Hello, World!\n";
 
     // insert code here...
-    runLongestCommonPrefix();
+    runThreeSum();
     
     return 0;
 }
