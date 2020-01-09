@@ -19,5 +19,6 @@ bool runMaxArea();
 bool runRomanToInt();
 bool runLongestCommonPrefix();
 bool runThreeSum();
+bool runLetterCombinations();
 
 #endif /* main_h */
