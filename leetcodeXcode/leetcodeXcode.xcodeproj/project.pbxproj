@@ -7,20 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E41E3B7E239238C4001FBEE3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41E3B7D239238C4001FBEE3 /* main.cpp */; };
-		E46129E023A9DF6B0056875E /* reverseinteger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129DF23A9DF6B0056875E /* reverseinteger.cpp */; };
-		E46129E223AA2F7C0056875E /* stringtointeger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129E123AA2F7C0056875E /* stringtointeger.cpp */; };
-		E46129E423AC82FC0056875E /* containerwithmostwater.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129E323AC82FC0056875E /* containerwithmostwater.cpp */; };
-		E46129E623ACB3B10056875E /* playground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129E523ACB3B10056875E /* playground.cpp */; };
-		E46129E923ACB7E60056875E /* romantointeger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129E823ACB7E60056875E /* romantointeger.cpp */; };
-		E46129EB23ACBD5D0056875E /* longestcommonprefix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129EA23ACBD5D0056875E /* longestcommonprefix.cpp */; };
-		E46129ED23B803650056875E /* 3sum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129EC23B803650056875E /* 3sum.cpp */; };
-		E46129EF23BB71A20056875E /* lettercombinationofphone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E46129EE23BB71A20056875E /* lettercombinationofphone.cpp */; };
-		E4D1AF4823A786280011B3A0 /* twosum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1AF4423A786270011B3A0 /* twosum.cpp */; };
-		E4D1AF4923A786280011B3A0 /* longestsubstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1AF4523A786280011B3A0 /* longestsubstring.cpp */; };
-		E4D1AF4A23A786280011B3A0 /* addtwonumbers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1AF4623A786280011B3A0 /* addtwonumbers.cpp */; };
-		E4D1AF4B23A786280011B3A0 /* print.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1AF4723A786280011B3A0 /* print.cpp */; };
-		E4D1AF4F23A786F50011B3A0 /* longestpalindromicsubstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1AF4E23A786F50011B3A0 /* longestpalindromicsubstring.cpp */; };
+		E407D07C24BE88A000CC6765 /* reverselinklist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E407D07B24BE88A000CC6765 /* reverselinklist.cpp */; };
+		E407D07E24BE8E2100CC6765 /* mergetwosortedlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E407D07D24BE8E2100CC6765 /* mergetwosortedlist.cpp */; };
+		E407D08024BEBBC900CC6765 /* palindromelkinkedlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E407D07F24BEBBC900CC6765 /* palindromelkinkedlist.cpp */; };
+		E407D08224BF68DA00CC6765 /* linkedlistcycle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E407D08124BF68DA00CC6765 /* linkedlistcycle.cpp */; };
+		E420A74A24BA9E5200561580 /* deletenodeinlinklist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E420A74924BA9E5200561580 /* deletenodeinlinklist.cpp */; };
+		E425471324B36EE30043A9B3 /* reverseinteger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546F124B36EE20043A9B3 /* reverseinteger.cpp */; };
+		E425471424B36EE30043A9B3 /* uglynumber2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546F224B36EE20043A9B3 /* uglynumber2.cpp */; };
+		E425471524B36EE30043A9B3 /* print.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546F324B36EE20043A9B3 /* print.cpp */; };
+		E425471624B36EE30043A9B3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546F424B36EE20043A9B3 /* main.cpp */; };
+		E425471724B36EE30043A9B3 /* longestpalindromicsubstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546F524B36EE20043A9B3 /* longestpalindromicsubstring.cpp */; };
+		E425471824B36EE30043A9B3 /* romantointeger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546F624B36EE20043A9B3 /* romantointeger.cpp */; };
+		E425471924B36EE30043A9B3 /* rotatearray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546F724B36EE20043A9B3 /* rotatearray.cpp */; };
+		E425471A24B36EE30043A9B3 /* twosum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546F824B36EE20043A9B3 /* twosum.cpp */; };
+		E425471B24B36EE30043A9B3 /* removenthnodefromend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546F924B36EE20043A9B3 /* removenthnodefromend.cpp */; };
+		E425471C24B36EE30043A9B3 /* 3sum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546FA24B36EE20043A9B3 /* 3sum.cpp */; };
+		E425471D24B36EE30043A9B3 /* longestcommonprefix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546FB24B36EE20043A9B3 /* longestcommonprefix.cpp */; };
+		E425471E24B36EE30043A9B3 /* removeduplicatesfromsortedlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546FC24B36EE20043A9B3 /* removeduplicatesfromsortedlist.cpp */; };
+		E425471F24B36EE30043A9B3 /* validsudoku.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546FD24B36EE20043A9B3 /* validsudoku.cpp */; };
+		E425472024B36EE30043A9B3 /* addtwonumbers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546FE24B36EE20043A9B3 /* addtwonumbers.cpp */; };
+		E425472124B36EE30043A9B3 /* lettercombinationofphone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42546FF24B36EE20043A9B3 /* lettercombinationofphone.cpp */; };
+		E425472224B36EE30043A9B3 /* longestsubstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470024B36EE20043A9B3 /* longestsubstring.cpp */; };
+		E425472324B36EE30043A9B3 /* numberofislands.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470124B36EE20043A9B3 /* numberofislands.cpp */; };
+		E425472424B36EE30043A9B3 /* maxprofit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470224B36EE20043A9B3 /* maxprofit.cpp */; };
+		E425472524B36EE30043A9B3 /* arrangingcoins.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470324B36EE20043A9B3 /* arrangingcoins.cpp */; };
+		E425472624B36EE30043A9B3 /* playground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470424B36EE30043A9B3 /* playground.cpp */; };
+		E425472724B36EE30043A9B3 /* hammingdistance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470524B36EE30043A9B3 /* hammingdistance.cpp */; };
+		E425472824B36EE30043A9B3 /* plusone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470624B36EE30043A9B3 /* plusone.cpp */; };
+		E425472924B36EE30043A9B3 /* singlenumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470724B36EE30043A9B3 /* singlenumber.cpp */; };
+		E425472A24B36EE30043A9B3 /* containerwithmostwater.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470824B36EE30043A9B3 /* containerwithmostwater.cpp */; };
+		E425472B24B36EE30043A9B3 /* maxsubarray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470924B36EE30043A9B3 /* maxsubarray.cpp */; };
+		E425472C24B36EE30043A9B3 /* validanagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470A24B36EE30043A9B3 /* validanagram.cpp */; };
+		E425472D24B36EE30043A9B3 /* containsduplicate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470B24B36EE30043A9B3 /* containsduplicate.cpp */; };
+		E425472E24B36EE30043A9B3 /* stringtointeger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470C24B36EE30043A9B3 /* stringtointeger.cpp */; };
+		E425472F24B36EE30043A9B3 /* happynumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470D24B36EE30043A9B3 /* happynumber.cpp */; };
+		E425473024B36EE30043A9B3 /* validprantheses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470E24B36EE30043A9B3 /* validprantheses.cpp */; };
+		E425473124B36EE30043A9B3 /* firstuniquecharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425470F24B36EE30043A9B3 /* firstuniquecharacter.cpp */; };
+		E425473224B36EE30043A9B3 /* validpalindrome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425471024B36EE30043A9B3 /* validpalindrome.cpp */; };
+		E425473324B36EE30043A9B3 /* reversesstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425471124B36EE30043A9B3 /* reversesstring.cpp */; };
+		E425473424B36EE30043A9B3 /* movezeros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425471224B36EE30043A9B3 /* movezeros.cpp */; };
+		E425473624B370710043A9B3 /* implementstrStr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E425473524B370710043A9B3 /* implementstrStr.cpp */; };
+		E496E6E124B57D4C00BBEDC9 /* islandperimeter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E496E6E024B57D4C00BBEDC9 /* islandperimeter.cpp */; };
+		E4EB1EC224C6B14F00353ADB /* integertoroman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EB1EC124C6B14F00353ADB /* integertoroman.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,24 +64,53 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E407D07B24BE88A000CC6765 /* reverselinklist.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = reverselinklist.cpp; sourceTree = "<group>"; };
+		E407D07D24BE8E2100CC6765 /* mergetwosortedlist.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mergetwosortedlist.cpp; sourceTree = "<group>"; };
+		E407D07F24BEBBC900CC6765 /* palindromelkinkedlist.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = palindromelkinkedlist.cpp; sourceTree = "<group>"; };
+		E407D08124BF68DA00CC6765 /* linkedlistcycle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = linkedlistcycle.cpp; sourceTree = "<group>"; };
 		E41E3B7A239238C4001FBEE3 /* leetcodeXcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetcodeXcode; sourceTree = BUILT_PRODUCTS_DIR; };
-		E41E3B7D239238C4001FBEE3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		E46129DF23A9DF6B0056875E /* reverseinteger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = reverseinteger.cpp; sourceTree = "<group>"; };
-		E46129E123AA2F7C0056875E /* stringtointeger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stringtointeger.cpp; sourceTree = "<group>"; };
-		E46129E323AC82FC0056875E /* containerwithmostwater.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = containerwithmostwater.cpp; sourceTree = "<group>"; };
-		E46129E523ACB3B10056875E /* playground.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = playground.cpp; sourceTree = "<group>"; };
+		E420A74924BA9E5200561580 /* deletenodeinlinklist.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = deletenodeinlinklist.cpp; sourceTree = "<group>"; };
+		E42546D524B308730043A9B3 /* macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
+		E42546F124B36EE20043A9B3 /* reverseinteger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = reverseinteger.cpp; path = source/reverseinteger.cpp; sourceTree = "<group>"; };
+		E42546F224B36EE20043A9B3 /* uglynumber2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uglynumber2.cpp; path = source/uglynumber2.cpp; sourceTree = "<group>"; };
+		E42546F324B36EE20043A9B3 /* print.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = print.cpp; path = source/print.cpp; sourceTree = "<group>"; };
+		E42546F424B36EE20043A9B3 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = source/main.cpp; sourceTree = "<group>"; };
+		E42546F524B36EE20043A9B3 /* longestpalindromicsubstring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = longestpalindromicsubstring.cpp; path = source/longestpalindromicsubstring.cpp; sourceTree = "<group>"; };
+		E42546F624B36EE20043A9B3 /* romantointeger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = romantointeger.cpp; path = source/romantointeger.cpp; sourceTree = "<group>"; };
+		E42546F724B36EE20043A9B3 /* rotatearray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rotatearray.cpp; path = source/rotatearray.cpp; sourceTree = "<group>"; };
+		E42546F824B36EE20043A9B3 /* twosum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = twosum.cpp; path = source/twosum.cpp; sourceTree = "<group>"; };
+		E42546F924B36EE20043A9B3 /* removenthnodefromend.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = removenthnodefromend.cpp; path = source/removenthnodefromend.cpp; sourceTree = "<group>"; };
+		E42546FA24B36EE20043A9B3 /* 3sum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = 3sum.cpp; path = source/3sum.cpp; sourceTree = "<group>"; };
+		E42546FB24B36EE20043A9B3 /* longestcommonprefix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = longestcommonprefix.cpp; path = source/longestcommonprefix.cpp; sourceTree = "<group>"; };
+		E42546FC24B36EE20043A9B3 /* removeduplicatesfromsortedlist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = removeduplicatesfromsortedlist.cpp; path = source/removeduplicatesfromsortedlist.cpp; sourceTree = "<group>"; };
+		E42546FD24B36EE20043A9B3 /* validsudoku.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = validsudoku.cpp; path = source/validsudoku.cpp; sourceTree = "<group>"; };
+		E42546FE24B36EE20043A9B3 /* addtwonumbers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = addtwonumbers.cpp; path = source/addtwonumbers.cpp; sourceTree = "<group>"; };
+		E42546FF24B36EE20043A9B3 /* lettercombinationofphone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lettercombinationofphone.cpp; path = source/lettercombinationofphone.cpp; sourceTree = "<group>"; };
+		E425470024B36EE20043A9B3 /* longestsubstring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = longestsubstring.cpp; path = source/longestsubstring.cpp; sourceTree = "<group>"; };
+		E425470124B36EE20043A9B3 /* numberofislands.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = numberofislands.cpp; path = source/numberofislands.cpp; sourceTree = "<group>"; };
+		E425470224B36EE20043A9B3 /* maxprofit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maxprofit.cpp; path = source/maxprofit.cpp; sourceTree = "<group>"; };
+		E425470324B36EE20043A9B3 /* arrangingcoins.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = arrangingcoins.cpp; path = source/arrangingcoins.cpp; sourceTree = "<group>"; };
+		E425470424B36EE30043A9B3 /* playground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = playground.cpp; path = source/playground.cpp; sourceTree = "<group>"; };
+		E425470524B36EE30043A9B3 /* hammingdistance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hammingdistance.cpp; path = source/hammingdistance.cpp; sourceTree = "<group>"; };
+		E425470624B36EE30043A9B3 /* plusone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = plusone.cpp; path = source/plusone.cpp; sourceTree = "<group>"; };
+		E425470724B36EE30043A9B3 /* singlenumber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = singlenumber.cpp; path = source/singlenumber.cpp; sourceTree = "<group>"; };
+		E425470824B36EE30043A9B3 /* containerwithmostwater.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = containerwithmostwater.cpp; path = source/containerwithmostwater.cpp; sourceTree = "<group>"; };
+		E425470924B36EE30043A9B3 /* maxsubarray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maxsubarray.cpp; path = source/maxsubarray.cpp; sourceTree = "<group>"; };
+		E425470A24B36EE30043A9B3 /* validanagram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = validanagram.cpp; path = source/validanagram.cpp; sourceTree = "<group>"; };
+		E425470B24B36EE30043A9B3 /* containsduplicate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = containsduplicate.cpp; path = source/containsduplicate.cpp; sourceTree = "<group>"; };
+		E425470C24B36EE30043A9B3 /* stringtointeger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stringtointeger.cpp; path = source/stringtointeger.cpp; sourceTree = "<group>"; };
+		E425470D24B36EE30043A9B3 /* happynumber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = happynumber.cpp; path = source/happynumber.cpp; sourceTree = "<group>"; };
+		E425470E24B36EE30043A9B3 /* validprantheses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = validprantheses.cpp; path = source/validprantheses.cpp; sourceTree = "<group>"; };
+		E425470F24B36EE30043A9B3 /* firstuniquecharacter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = firstuniquecharacter.cpp; path = source/firstuniquecharacter.cpp; sourceTree = "<group>"; };
+		E425471024B36EE30043A9B3 /* validpalindrome.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = validpalindrome.cpp; path = source/validpalindrome.cpp; sourceTree = "<group>"; };
+		E425471124B36EE30043A9B3 /* reversesstring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = reversesstring.cpp; path = source/reversesstring.cpp; sourceTree = "<group>"; };
+		E425471224B36EE30043A9B3 /* movezeros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = movezeros.cpp; path = source/movezeros.cpp; sourceTree = "<group>"; };
+		E425473524B370710043A9B3 /* implementstrStr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = implementstrStr.cpp; sourceTree = "<group>"; };
 		E46129E723ACB3E10056875E /* playground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = playground.h; sourceTree = "<group>"; };
-		E46129E823ACB7E60056875E /* romantointeger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = romantointeger.cpp; sourceTree = "<group>"; };
-		E46129EA23ACBD5D0056875E /* longestcommonprefix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = longestcommonprefix.cpp; sourceTree = "<group>"; };
-		E46129EC23B803650056875E /* 3sum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 3sum.cpp; sourceTree = "<group>"; };
-		E46129EE23BB71A20056875E /* lettercombinationofphone.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lettercombinationofphone.cpp; sourceTree = "<group>"; };
-		E4D1AF4423A786270011B3A0 /* twosum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = twosum.cpp; sourceTree = "<group>"; };
-		E4D1AF4523A786280011B3A0 /* longestsubstring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = longestsubstring.cpp; sourceTree = "<group>"; };
-		E4D1AF4623A786280011B3A0 /* addtwonumbers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = addtwonumbers.cpp; sourceTree = "<group>"; };
-		E4D1AF4723A786280011B3A0 /* print.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = print.cpp; sourceTree = "<group>"; };
+		E496E6E024B57D4C00BBEDC9 /* islandperimeter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = islandperimeter.cpp; sourceTree = "<group>"; };
 		E4D1AF4C23A786340011B3A0 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		E4D1AF4D23A786340011B3A0 /* print.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = print.h; sourceTree = "<group>"; };
-		E4D1AF4E23A786F50011B3A0 /* longestpalindromicsubstring.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = longestpalindromicsubstring.cpp; sourceTree = "<group>"; };
+		E4EB1EC124C6B14F00353ADB /* integertoroman.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = integertoroman.cpp; path = source/integertoroman.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,23 +144,52 @@
 		E41E3B7C239238C4001FBEE3 /* source */ = {
 			isa = PBXGroup;
 			children = (
-				E4D1AF4623A786280011B3A0 /* addtwonumbers.cpp */,
-				E4D1AF4523A786280011B3A0 /* longestsubstring.cpp */,
-				E4D1AF4723A786280011B3A0 /* print.cpp */,
-				E4D1AF4423A786270011B3A0 /* twosum.cpp */,
-				E41E3B7D239238C4001FBEE3 /* main.cpp */,
-				E4D1AF4E23A786F50011B3A0 /* longestpalindromicsubstring.cpp */,
-				E46129DF23A9DF6B0056875E /* reverseinteger.cpp */,
-				E46129E123AA2F7C0056875E /* stringtointeger.cpp */,
-				E46129E323AC82FC0056875E /* containerwithmostwater.cpp */,
-				E46129E523ACB3B10056875E /* playground.cpp */,
-				E46129E823ACB7E60056875E /* romantointeger.cpp */,
-				E46129EA23ACBD5D0056875E /* longestcommonprefix.cpp */,
-				E46129EC23B803650056875E /* 3sum.cpp */,
-				E46129EE23BB71A20056875E /* lettercombinationofphone.cpp */,
+				E42546FA24B36EE20043A9B3 /* 3sum.cpp */,
+				E42546FE24B36EE20043A9B3 /* addtwonumbers.cpp */,
+				E425470324B36EE20043A9B3 /* arrangingcoins.cpp */,
+				E425470824B36EE30043A9B3 /* containerwithmostwater.cpp */,
+				E425470B24B36EE30043A9B3 /* containsduplicate.cpp */,
+				E420A74924BA9E5200561580 /* deletenodeinlinklist.cpp */,
+				E425470F24B36EE30043A9B3 /* firstuniquecharacter.cpp */,
+				E425470524B36EE30043A9B3 /* hammingdistance.cpp */,
+				E425470D24B36EE30043A9B3 /* happynumber.cpp */,
+				E425473524B370710043A9B3 /* implementstrStr.cpp */,
+				E4EB1EC124C6B14F00353ADB /* integertoroman.cpp */,
+				E496E6E024B57D4C00BBEDC9 /* islandperimeter.cpp */,
+				E42546FF24B36EE20043A9B3 /* lettercombinationofphone.cpp */,
+				E407D08124BF68DA00CC6765 /* linkedlistcycle.cpp */,
+				E42546FB24B36EE20043A9B3 /* longestcommonprefix.cpp */,
+				E42546F524B36EE20043A9B3 /* longestpalindromicsubstring.cpp */,
+				E425470024B36EE20043A9B3 /* longestsubstring.cpp */,
+				E42546F424B36EE20043A9B3 /* main.cpp */,
+				E425470224B36EE20043A9B3 /* maxprofit.cpp */,
+				E425470924B36EE30043A9B3 /* maxsubarray.cpp */,
+				E407D07D24BE8E2100CC6765 /* mergetwosortedlist.cpp */,
+				E425471224B36EE30043A9B3 /* movezeros.cpp */,
+				E425470124B36EE20043A9B3 /* numberofislands.cpp */,
+				E407D07F24BEBBC900CC6765 /* palindromelkinkedlist.cpp */,
+				E425470424B36EE30043A9B3 /* playground.cpp */,
+				E425470624B36EE30043A9B3 /* plusone.cpp */,
+				E42546F324B36EE20043A9B3 /* print.cpp */,
+				E42546FC24B36EE20043A9B3 /* removeduplicatesfromsortedlist.cpp */,
+				E42546F924B36EE20043A9B3 /* removenthnodefromend.cpp */,
+				E42546F124B36EE20043A9B3 /* reverseinteger.cpp */,
+				E407D07B24BE88A000CC6765 /* reverselinklist.cpp */,
+				E425471124B36EE30043A9B3 /* reversesstring.cpp */,
+				E42546F624B36EE20043A9B3 /* romantointeger.cpp */,
+				E42546F724B36EE20043A9B3 /* rotatearray.cpp */,
+				E425470724B36EE30043A9B3 /* singlenumber.cpp */,
+				E425470C24B36EE30043A9B3 /* stringtointeger.cpp */,
+				E42546F824B36EE20043A9B3 /* twosum.cpp */,
+				E42546F224B36EE20043A9B3 /* uglynumber2.cpp */,
+				E425470A24B36EE30043A9B3 /* validanagram.cpp */,
+				E425471024B36EE30043A9B3 /* validpalindrome.cpp */,
+				E425470E24B36EE30043A9B3 /* validprantheses.cpp */,
+				E42546FD24B36EE20043A9B3 /* validsudoku.cpp */,
 			);
-			path = source;
-			sourceTree = "<group>";
+			name = source;
+			path = /Users/rehanashraf/rehan/CodingPractice/leetcodeXcode;
+			sourceTree = "<absolute>";
 		};
 		E41E3B85239238D6001FBEE3 /* include */ = {
 			isa = PBXGroup;
@@ -111,6 +197,7 @@
 				E4D1AF4C23A786340011B3A0 /* main.h */,
 				E4D1AF4D23A786340011B3A0 /* print.h */,
 				E46129E723ACB3E10056875E /* playground.h */,
+				E42546D524B308730043A9B3 /* macros.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -172,20 +259,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E46129E923ACB7E60056875E /* romantointeger.cpp in Sources */,
-				E46129E023A9DF6B0056875E /* reverseinteger.cpp in Sources */,
-				E4D1AF4B23A786280011B3A0 /* print.cpp in Sources */,
-				E46129EF23BB71A20056875E /* lettercombinationofphone.cpp in Sources */,
-				E4D1AF4823A786280011B3A0 /* twosum.cpp in Sources */,
-				E4D1AF4A23A786280011B3A0 /* addtwonumbers.cpp in Sources */,
-				E46129ED23B803650056875E /* 3sum.cpp in Sources */,
-				E46129E423AC82FC0056875E /* containerwithmostwater.cpp in Sources */,
-				E46129E223AA2F7C0056875E /* stringtointeger.cpp in Sources */,
-				E4D1AF4F23A786F50011B3A0 /* longestpalindromicsubstring.cpp in Sources */,
-				E41E3B7E239238C4001FBEE3 /* main.cpp in Sources */,
-				E46129E623ACB3B10056875E /* playground.cpp in Sources */,
-				E4D1AF4923A786280011B3A0 /* longestsubstring.cpp in Sources */,
-				E46129EB23ACBD5D0056875E /* longestcommonprefix.cpp in Sources */,
+				E425471E24B36EE30043A9B3 /* removeduplicatesfromsortedlist.cpp in Sources */,
+				E425472124B36EE30043A9B3 /* lettercombinationofphone.cpp in Sources */,
+				E425472224B36EE30043A9B3 /* longestsubstring.cpp in Sources */,
+				E425473124B36EE30043A9B3 /* firstuniquecharacter.cpp in Sources */,
+				E425472524B36EE30043A9B3 /* arrangingcoins.cpp in Sources */,
+				E4EB1EC224C6B14F00353ADB /* integertoroman.cpp in Sources */,
+				E425472824B36EE30043A9B3 /* plusone.cpp in Sources */,
+				E425473424B36EE30043A9B3 /* movezeros.cpp in Sources */,
+				E425472024B36EE30043A9B3 /* addtwonumbers.cpp in Sources */,
+				E425471724B36EE30043A9B3 /* longestpalindromicsubstring.cpp in Sources */,
+				E425471B24B36EE30043A9B3 /* removenthnodefromend.cpp in Sources */,
+				E425472F24B36EE30043A9B3 /* happynumber.cpp in Sources */,
+				E407D08224BF68DA00CC6765 /* linkedlistcycle.cpp in Sources */,
+				E407D07E24BE8E2100CC6765 /* mergetwosortedlist.cpp in Sources */,
+				E425472724B36EE30043A9B3 /* hammingdistance.cpp in Sources */,
+				E425471924B36EE30043A9B3 /* rotatearray.cpp in Sources */,
+				E425472C24B36EE30043A9B3 /* validanagram.cpp in Sources */,
+				E425472624B36EE30043A9B3 /* playground.cpp in Sources */,
+				E425471D24B36EE30043A9B3 /* longestcommonprefix.cpp in Sources */,
+				E425471A24B36EE30043A9B3 /* twosum.cpp in Sources */,
+				E425471424B36EE30043A9B3 /* uglynumber2.cpp in Sources */,
+				E425472424B36EE30043A9B3 /* maxprofit.cpp in Sources */,
+				E425473024B36EE30043A9B3 /* validprantheses.cpp in Sources */,
+				E407D07C24BE88A000CC6765 /* reverselinklist.cpp in Sources */,
+				E425472E24B36EE30043A9B3 /* stringtointeger.cpp in Sources */,
+				E425471324B36EE30043A9B3 /* reverseinteger.cpp in Sources */,
+				E425472A24B36EE30043A9B3 /* containerwithmostwater.cpp in Sources */,
+				E425472B24B36EE30043A9B3 /* maxsubarray.cpp in Sources */,
+				E425473324B36EE30043A9B3 /* reversesstring.cpp in Sources */,
+				E407D08024BEBBC900CC6765 /* palindromelkinkedlist.cpp in Sources */,
+				E425473624B370710043A9B3 /* implementstrStr.cpp in Sources */,
+				E425471624B36EE30043A9B3 /* main.cpp in Sources */,
+				E425471524B36EE30043A9B3 /* print.cpp in Sources */,
+				E496E6E124B57D4C00BBEDC9 /* islandperimeter.cpp in Sources */,
+				E425471824B36EE30043A9B3 /* romantointeger.cpp in Sources */,
+				E425472D24B36EE30043A9B3 /* containsduplicate.cpp in Sources */,
+				E420A74A24BA9E5200561580 /* deletenodeinlinklist.cpp in Sources */,
+				E425471F24B36EE30043A9B3 /* validsudoku.cpp in Sources */,
+				E425471C24B36EE30043A9B3 /* 3sum.cpp in Sources */,
+				E425472924B36EE30043A9B3 /* singlenumber.cpp in Sources */,
+				E425472324B36EE30043A9B3 /* numberofislands.cpp in Sources */,
+				E425473224B36EE30043A9B3 /* validpalindrome.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,7 +32,29 @@
 #include "print.h"
 /* use two sum */
 std::vector<int> twoSum(std::vector<int>& nums, int target);
+//new approach
 
+std::vector<std::vector<int>> threeSum(std::vector<int>& nums)
+{
+    std::vector<std::vector<int>> rv;
+    std::size_t numsSize = nums.size();
+    
+    if(numsSize < 3)
+    {
+        return rv;
+    }
+    
+    return rv;
+}
+
+bool runThreeSum()
+{
+    bool rv = true;
+    std::vector<std::vector<int>> result;
+    
+    return rv;
+}
+/*
 std::vector<std::vector<int>> threeSum(std::vector<int>& nums);
 void sortList(std::vector<int>& list );
 bool isListInList(std::vector<std::vector<int>>& matrix, std::vector<int>& row);
@@ -44,7 +66,7 @@ std::vector<std::vector<int>> threeSum(std::vector<int>& nums)
     std::vector<std::vector<int>> rv;
     std::size_t numsSize = nums.size();
     
-    if(numsSize == 0)
+    if(numsSize < 3)
     {
         return rv;
     }
@@ -151,3 +173,4 @@ bool runThreeSum()
     
     return rv;
 }
+*/

@@ -10,5 +10,6 @@
 #define playground_h
 
 void testSwitchCases();
+void sameLinePrint();
 
 #endif /* playground_h */
