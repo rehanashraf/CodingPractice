@@ -57,6 +57,15 @@ void printList(ListNode *list)
     std::cout<< list->val << std::endl;
 }
 
+// A utility function to print an array of size n
+void printArray(int arr[], int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+}
+
 //template <typename T>
 //void printVector(std::vector<T>& list)
 //{
@@ -70,6 +79,8 @@ void printList(ListNode *list)
 //    std::cout << '\n';
 //}
 
+// #include <stdarg.h> for C
+// #include <cstdarg>
 void Myprintf(char* format,...)
 {
     char *traverse;

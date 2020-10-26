@@ -43,17 +43,23 @@ std::vector<std::vector<int>> threeSum(std::vector<int>& nums)
     {
         return rv;
     }
+    for (int i = 0; i < numsSize - 2; i++)
+    {
+    	for (int j = i+1; j < numsSize -1; j++)
+    	{
+    		for (int k = j+1; k < numsSize; k++)
+    		{
+    			if (nums[i] + nums[j] + nums[k] == 0)
+    			{
+
+    			}
+    		}
+    	}
+    }
     
     return rv;
 }
 
-bool runThreeSum()
-{
-    bool rv = true;
-    std::vector<std::vector<int>> result;
-    
-    return rv;
-}
 /*
 std::vector<std::vector<int>> threeSum(std::vector<int>& nums);
 void sortList(std::vector<int>& list );
@@ -155,7 +161,7 @@ bool isListInList(std::vector<std::vector<int>>& matrix, std::vector<int>& row)
     }
     return rv;
 }
-
+*/
 bool runThreeSum()
 {
     bool rv = true;
@@ -173,4 +179,4 @@ bool runThreeSum()
     
     return rv;
 }
-*/
+

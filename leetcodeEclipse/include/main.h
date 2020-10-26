@@ -44,5 +44,17 @@ bool runMergeTwoLists(void);
 bool runIsLinkedListPalindrome(void);
 bool runLinkedListHasCycle(void);
 bool runIntToRoman(void);
+bool runIsSameTree(void);
+bool runNumIslands();
+bool runReverseBits(void);
+bool runInvertBits(void);
+bool runRehanQueue(void);
+bool runRehanStack(void);
+bool runCutRod();
+bool runMedianofTwoSortedArrays();
+bool runBubbleSort();
+
+bool runQuickSort();
+bool runSelectionSort();
 
 #endif /* main_h */

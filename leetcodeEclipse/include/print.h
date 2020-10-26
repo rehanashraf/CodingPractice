@@ -15,6 +15,7 @@
 #include <vector>
 #include <utility>
 #include <cstdarg>
+using namespace std;
 
 struct ListNode
 {
@@ -30,6 +31,15 @@ struct Point
     Point(int x = 0, int y = 0): x(x), y(y) {}
 };
 
+struct TreeNode {
+	int val;
+	TreeNode *left;
+	TreeNode *right;
+	TreeNode() : val(0), left(nullptr), right(nullptr) {}
+	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+	TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+
 //template <typename T>
 void printVector(std::vector<int>& list);
 void printVector(std::vector<char>& list);
@@ -40,6 +50,7 @@ char* convert(unsigned int, int);         //Convert integer number into octal, h
 void print2DVector(std::vector<std::vector<char>> &grid);
 void print2DVector(std::vector<std::vector<int>> &grid);
 void printPairs(std::vector<std::pair<int, int>> &list);
+void printArray(int arr[], int n);
 
 template <typename T>
 void printTVector(const std::vector<T>& list)
