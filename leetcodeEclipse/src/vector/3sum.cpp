@@ -25,40 +25,102 @@
 
 //311/313 test Cases Passed
 
-#include <stdio.h>
-#include <vector>
-#include <iostream>
-
 #include "print.h"
 /* use two sum */
-std::vector<int> twoSum(std::vector<int>& nums, int target);
 //new approach
 
-std::vector<std::vector<int>> threeSum(std::vector<int>& nums)
-{
-    std::vector<std::vector<int>> rv;
-    std::size_t numsSize = nums.size();
-    
-    if(numsSize < 3)
-    {
-        return rv;
-    }
-    for (int i = 0; i < numsSize - 2; i++)
-    {
-    	for (int j = i+1; j < numsSize -1; j++)
-    	{
-    		for (int k = j+1; k < numsSize; k++)
-    		{
-    			if (nums[i] + nums[j] + nums[k] == 0)
-    			{
 
-    			}
+std::vector<std::vector<int>> threeSum(std::vector<int>& nums) {
+    std::sort(nums.begin(), nums.end());
+    std::vector<std::vector<int>> res;
+
+
+	int j = 0;
+	int k = nums.size() -1;
+    for (int i = 0; i < nums.size();i++)
+    {
+    	j = i + 1;
+        k = nums.size() -1;
+    	if (i > 0 && nums[i] == nums[i-1])
+    		continue;
+    	while (j < k)
+    	{
+    		if (k < nums.size() -1 && nums[k] == nums[k+1])
+    		{
+    			k--;
+    			continue;
+    		}
+    		if (nums[i] + nums[j] + nums[k] > 0)
+    		{
+    			k--;
+    		}
+    		else if (nums[i] + nums[j] + nums[k] < 0)
+    		{
+    			j++;
+    		}
+    		else
+    		{
+    			res.push_back({nums[i],nums[j], nums[k]});
+    			j++;
+    			k--;
     		}
     	}
     }
-    
-    return rv;
+    // Iterrator way
+/*
+
+    for (auto it = nums.begin(); it != nums.end(); ++it) {
+        auto left = it + 1;
+        auto right = nums.rbegin();
+        while (left < right.base()) {
+            auto sum = *it + *left + *right;
+            if (right < nums.rbegin() && *right == *(right +1))
+            {
+            	right--;
+            	continue;
+            }
+            if (sum < 0) {
+                ++left;
+            } else if (sum > 0) {
+                ++right;
+            } else {
+                res.push_back({*it, *left, *right});
+                std::cout << *it << " " <<  *left << " " << *right << std::endl;
+                ++left;
+                ++right;
+            }
+        }
+    }
+*/
+
+    return res;
 }
+
+//std::vector<std::vector<int>> threeSum(std::vector<int>& nums)
+//{
+//    std::vector<std::vector<int>> rv;
+//    std::size_t numsSize = nums.size();
+//
+//    if(numsSize < 3)
+//    {
+//        return rv;
+//    }
+//    for (int i = 0; i < numsSize - 2; i++)
+//    {
+//    	for (int j = i+1; j < numsSize -1; j++)
+//    	{
+//    		for (int k = j+1; k < numsSize; k++)
+//    		{
+//    			if (nums[i] + nums[j] + nums[k] == 0)
+//    			{
+//
+//    			}
+//    		}
+//    	}
+//    }
+//
+//    return rv;
+//}
 
 /*
 std::vector<std::vector<int>> threeSum(std::vector<int>& nums);

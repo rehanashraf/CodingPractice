@@ -13,6 +13,7 @@
 #define SWAPNIBBLE(byte)		(((byte & 0x0F) << 4) | ((byte & 0xF0) >> 4))
 
 #define C_TO_F(deg_c)	(((float)(deg_c)*9)/5 + 32)
+#define INT_BITS 32
 
 uint8_t flip_hi_low(uint8_t n)
 {
@@ -148,7 +149,7 @@ int32_t subtract(int32_t x, int32_t y)
     return x;
 }
 
-#define INT_BITS 32
+
 /*Function to left rotate n by d bits*/
 int leftRotate(int n, unsigned int d)
 {

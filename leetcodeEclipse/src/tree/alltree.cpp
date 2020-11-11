@@ -49,6 +49,28 @@ int maxDepth(TreeNode* root) {
 	return MAX(ldepth, rdepth);
 }
 
+bool isBSTUtil(tnode* node, int min, int max)
+{
+    /* an empty tree is BST */
+    if (node==NULL)
+        return 1;
+
+    /* false if this node violates
+    the min/max constraint */
+    if (node->val < min || node->val > max)
+        return 0;
+
+    /* otherwise check the subtrees recursively,
+    tightening the min or max constraint */
+    return
+        isBSTUtil(node->left, min, node->val-1) && // Allow only distinct values
+        isBSTUtil(node->right, node->val+1, max); // Allow only distinct values
+}
+
+bool isBSTValid(tnode *root)
+{
+    return(isBSTUtil(root, INT_MIN, INT_MAX));
+}
 /*
 	  1
 	/   \
@@ -115,6 +137,13 @@ void printLevelOrder(tnode* root)
         printGivenLevel(root, i);
 }
 
+/*
+	  1
+	/   \
+   2     3
+  / \   / \
+ 4   5 6   7
+ */
 /* Depth First Traversal
  * In order (Left, Root, Right) 4 2 5 1 6 3 7
  * Pre order (Root, Left, Right) 1 2 4 5 3 6 7

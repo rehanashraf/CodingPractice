@@ -9,6 +9,6 @@
 #define UTILITY_H_
 
 void swap(int* a, int* b);
-
+void swap(int &a, int &b);
 
 #endif /* UTILITY_H_ */

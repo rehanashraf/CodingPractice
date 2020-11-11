@@ -22,7 +22,7 @@ using namespace std;
 
 #include "print.h"
 
-vector<int> twoSum(vector<int>& nums, int target)
+vector<int> twoSumBruteForce(vector<int>& nums, int target)
 {
     vector<int> rv ;
     size_t siezeoflist = nums.size();
@@ -39,7 +39,6 @@ vector<int> twoSum(vector<int>& nums, int target)
             }
         }
     }
-
     return rv;
 }
 
@@ -54,7 +53,7 @@ bool runTwoSum()
 
     printVector(testlist);
 
-    testlist = twoSum(testlist, 9);
+    testlist = twoSumBruteForce(testlist, 9);
 
     printVector(testlist);
 

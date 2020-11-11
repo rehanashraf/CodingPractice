@@ -10,9 +10,17 @@
 
 
 // A utility function to swap two elements
-void swap(int* a, int* b)
+inline void swap(int* a, int* b)
 {
     int t = *a;
     *a = *b;
     *b = t;
+}
+
+inline void swap(int &a, int &b)
+{
+	int temp;
+	temp = a;
+	a = b;
+	b = temp;
 }

@@ -25,8 +25,8 @@
 #include <iostream>
 
 #include "print.h"
-
-int maxArea(std::vector<int>& height)
+#include "macros.h"
+int maxAreaBruteForce(std::vector<int>& height)
 {
     int returnValue = 0, currentMaxArea = 0, longestMaxArea = 0, length = 0, width = 0;
     size_t arrayLength = 0;
@@ -59,13 +59,26 @@ int maxArea(std::vector<int>& height)
     return returnValue;
 }
 
+int maxAreaDoublePointer(std::vector<int>& height)
+{
+    int maxarea = 0, l = 0, r = height.size() - 1;
+    while (l < r) {
+        maxarea = MAX(maxarea, MIN(height[l], height[r]) * (r - l));
+        if (height[l] < height[r])
+            l++;
+        else
+            r--;
+    }
+    return maxarea;
+}
+
 bool runMaxArea()
 {
     bool retunValue = true;
     
     std::vector<int> firstArray{1,8,6,2,5,4,8,3,7};
     printVector(firstArray);
-    std::cout << "Max Area is " << maxArea(firstArray) << std::endl;
+    std::cout << "Max Area is " << maxAreaBruteForce(firstArray) << std::endl;
     
     return retunValue;
 }
