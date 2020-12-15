@@ -15,8 +15,8 @@ void rotate90Clockwise(int a[N][N]);
 
 void transposefromleft(std::vector<std::vector<int>>& matrix);
 void rotate90AntiClockwise(std::vector<std::vector<int>>& matrix);
-void swapCols(std::vector<std::vector<int>>& matrix)
-void transposefromright(std::vector<std::vector<int>>& matrix)
+void swapCols(std::vector<std::vector<int>>& matrix);
+void transposefromright(std::vector<std::vector<int>>& matrix);
 
 void rotateMatrix(int mat[][N])
 {

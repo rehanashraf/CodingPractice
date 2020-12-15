@@ -7,20 +7,3 @@
 
 #include "utility.h"
 
-
-
-// A utility function to swap two elements
-inline void swap(int* a, int* b)
-{
-    int t = *a;
-    *a = *b;
-    *b = t;
-}
-
-inline void swap(int &a, int &b)
-{
-	int temp;
-	temp = a;
-	a = b;
-	b = temp;
-}

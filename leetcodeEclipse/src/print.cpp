@@ -66,21 +66,6 @@ void printArray(int arr[], int n)
     cout << endl;
 }
 
-//template <typename T>
-//void printVector(std::vector<T>& list)
-//{
-//    typedef typename std::vector<T>::iterator iterator;
-//    iterator it;
-//    std::cout << "Vector contains:";
-//
-//    for (it=list.begin(); it<list.end(); it++)
-//        std::cout << ' ' << *it;
-//
-//    std::cout << '\n';
-//}
-
-// #include <stdarg.h> for C
-// #include <cstdarg>
 void Myprintf(char* format,...)
 {
     char *traverse;
