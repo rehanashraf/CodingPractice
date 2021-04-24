@@ -1,15 +1,25 @@
-//============================================================================
-// Name        : leetcode.cpp
-// Author      : Rehan Ashraf
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
+//
+//  main.cpp
+//  leetcodeXcode
+//
+//  Created by Rehan Ashraf on 11/29/19.
+//  Copyright © 2019 Rehan Ashraf. All rights reserved.
+//
 
+#include <stdio.h>
 #include <iostream>
-using namespace std;
+#include "main.h"
+#include "playground.h"
 
-int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-	return 0;
+
+int main(int argc, const char * argv[])
+{
+    std::cout << "Hello, World!\n";
+
+    for (int i = 0; i < 0; ++i)
+        std::cout << "Hello World " << i << std::endl;
+        // insert code here...
+//    runMaxProfit();
+    runRehanStack();
+    return 0;
 }
