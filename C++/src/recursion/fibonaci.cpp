@@ -39,3 +39,37 @@ int getFib2(int n)
   }
   return rv1;
 }
+
+/*
+0 1
+1 1
+2 2
+3 3
+4 5
+5 8
+6 13
+7 21
+8 34
+9 55
+*/
+// 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+int getFibDynamic(int num)
+{
+    int rv = 0, f_1 = 1, f_n = 0;
+
+    if (num < 0)
+        return rv;
+    
+    if (num < 2) {
+        return f_1;
+    }
+    
+    for (int i = 2; i <= num; i++) {
+        
+    }
+
+    
+    
+    
+    return rv;
+}

@@ -32,8 +32,8 @@ bool runStr();
 int strStr(std::string haystack, std::string needle);
 
 int strStr(std::string haystack, std::string needle) {
-    int rv = -1, loopsize;
-    size_t lengthhaystack, lenghthneedle;
+    int rv = -1;
+    size_t loopsize, lengthhaystack, lenghthneedle;
     
     lenghthneedle = lengthhaystack = 0;
     
@@ -53,7 +53,7 @@ int strStr(std::string haystack, std::string needle) {
     else
         return rv;
     
-    for (int i = 0; i <= loopsize; i++)
+    for (uint8_t i = 0; i <= loopsize; i++)
     {
         if (haystack[i] == needle[0])
         {

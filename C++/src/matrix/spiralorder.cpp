@@ -14,7 +14,7 @@
 
 std::vector<int> spiralOrder(std::vector<std::vector<int>> &matrix) {
     std::vector<int> rv;
-	int top, bottom, right, left, size;
+	size_t top, bottom, right, left, size;
 
 	if (matrix.size() == 0)
 		return rv;
@@ -28,26 +28,26 @@ std::vector<int> spiralOrder(std::vector<std::vector<int>> &matrix) {
 
 	while(rv.size() < size)
 	{
-		for(int i = left; i <= right && rv.size() < size; i++)
+		for(uint8_t i = left; i <= right && rv.size() < size; i++)
 		{
 			rv.push_back(matrix[top][i]);
 		}
 		top++;
 
-		for(int i = top; i <= bottom && rv.size() < size; i++)
+		for(uint8_t i = top; i <= bottom && rv.size() < size; i++)
 		{
 
 			rv.push_back(matrix[i][right]);
 		}
 		right--;
 
-		for (int i = right; i >= left && rv.size() < size;i--)
+		for (uint8_t i = right; i >= left && rv.size() < size;i--)
 		{
 			rv.push_back(matrix[bottom][i]);
 		}
 		bottom--;
 
-		for(int i = bottom; i >= top && rv.size() < size;i--)
+		for(uint8_t i = bottom; i >= top && rv.size() < size;i--)
 		{
 			rv.push_back(matrix[i][left]);
 		}

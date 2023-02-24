@@ -30,7 +30,6 @@ bool runIsHappy(void);
 bool isHappy(int n)
 {
 	bool rv  = false;
-	int sum = 0;
 	std::vector<int> list;
 
 

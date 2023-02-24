@@ -47,7 +47,7 @@ bool isLinkedListPalindrome(ListNode* head) {
     }
     
     iterator = head;
-    for(int i = array.size(); i >= 0; i--)
+    for(uint8_t i = array.size(); i >= 0; i--)
     {
         if (array[i] != iterator->val)
         {

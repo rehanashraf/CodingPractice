@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <unistd.h>
+#include <time.h>
 
 void testSwitchCases()
 {
@@ -44,4 +45,28 @@ void sameLinePrint()
         fflush(stdout);
         usleep(1*seconds);
     }
+}
+
+uint64_t getTimeUTC(void) {
+    uint64_t ret = 0;
+    time_t current_time = 0;
+
+    
+    current_time = time(NULL);
+//    gmtime_r(&current_time, &utc_time);
+    struct tm *utc_time = gmtime(&current_time);
+    printf("UTC time: %s", asctime(utc_time));
+    
+    struct tm *local_time = localtime(&current_time);
+    printf("Local time: %s", asctime(local_time));
+//    printf("UTC Time:%lu, Local Time:%lu\n", (long)current_time, (long)ret);
+//    ret = localtime_r(&current_time, &local_time);
+//    printf("UTC Time:%lu, Local Time:%lu\n", (long)current_time, (long)ret);
+    return ret;
+}
+int convertTimeStringToEpoch(const char *string, const char *format) {
+    int retVal = 0;
+    
+    
+    return retVal;
 }

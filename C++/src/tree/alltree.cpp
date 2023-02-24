@@ -16,7 +16,6 @@ typedef struct TreeNode tnode;
 bool isSameTree(TreeNode* p, TreeNode* q) {
 	bool rv , lrv, rrv;
 	rv = lrv = rrv = false;
-	int temp = 0;
 
 	TreeNode *pleft, *pright, *qleft, *qright;
 	pleft = pright = qleft = qright = nullptr;
@@ -212,7 +211,7 @@ void printNode(tnode *head, int level, int heigthToPrint)
 
 	if (level == heigthToPrint)
 	{
-		printf("%d &d ", right, left);
+		printf("%d %d ", right, left);
 	}
 
 }

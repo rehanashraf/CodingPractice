@@ -54,8 +54,7 @@ std::vector<std::pair<int, int>> getAdjacent(int row, int col, int maxRow, int m
 }
 
 int islandPerimeter(std::vector<std::vector<int>>& grid) {
-    int rv, withLand;
-    size_t maxRows, maxCols;
+    int rv, withLand, maxRows, maxCols;
     std::vector<std::pair<int, int>> adjacentBlocks;
     
     rv = maxRows = maxCols = withLand = 0;

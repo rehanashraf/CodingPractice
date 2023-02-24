@@ -5,7 +5,7 @@
  *      Author: rehanashraf
  */
 
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 string countnndSay(int n)
@@ -24,7 +24,7 @@ string countnndSay(int n)
         // is why a dummy character is added to make
         // sure that loop runs one extra iteration.
         str += '$';
-        int len = str.length();
+        size_t len = str.length();
 
         int cnt = 1; // Initialize count of matching chars
         string  tmp = ""; // Initialize i'th term in series

@@ -8,8 +8,8 @@
 #include<stdio.h>
 typedef int xSemaphoreHandle;
 int xSemaphoreCreateMutex(){return 0;}
-void vSemaphoreCreateBinary(xSemaphoreHandle n){}
-void vTaskDelay(int n){}
+void vSemaphoreCreateBinary(xSemaphoreHandle n){return;}
+void vTaskDelay(int n){return;}
 void xSemaphoreGive(xSemaphoreHandle n){}
 int xSemaphoreTake(xSemaphoreHandle n, int m){return 1;}
 #define portMAX_DELAY 10000000

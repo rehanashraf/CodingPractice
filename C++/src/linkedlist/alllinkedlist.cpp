@@ -23,6 +23,16 @@ struct Node
 };
 typedef struct Node node_S;
 
+ListNode* middleNode(ListNode* head) {
+    ListNode *rv = NULL;
+    rv = head;
+    while(head && head->next && head->next) {
+        rv = rv->next;
+        head = head->next->next;
+    }
+    return rv;
+}
+
 ListNode* middleoflinkedlist(ListNode *head)
 {
 	ListNode *rv = NULL;

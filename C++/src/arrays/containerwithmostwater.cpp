@@ -61,9 +61,10 @@ int maxAreaBruteForce(std::vector<int>& height)
 
 int maxAreaDoublePointer(std::vector<int>& height)
 {
-    int maxarea = 0, l = 0, r = height.size() - 1;
+    int maxarea = 0, l = 0;
+    size_t r = height.size() - 1;
     while (l < r) {
-        maxarea = MAX(maxarea, MIN(height[l], height[r]) * (r - l));
+        maxarea = MAX(maxarea, MIN(height[l], height[r]) * (int)(r - l));
         if (height[l] < height[r])
             l++;
         else

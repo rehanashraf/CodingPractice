@@ -11,15 +11,17 @@
 #include "main.h"
 #include "playground.h"
 
-
+int getFib(int n);
 int main(int argc, const char * argv[])
 {
     std::cout << "Hello, World!\n";
 
-    for (int i = 0; i < 10; ++i)
-        std::cout << "Hello World " << i << std::endl;
+    for (int i = 0; i < 10; ++i){
+        std::cout << "Hello World " << i << " " << getFib(i) << std::endl;
+    }
         // insert code here...
 //    runMaxProfit();
-    runRehanStack();
+//    runRehanStack();
+    getTimeUTC();
     return 0;
 }

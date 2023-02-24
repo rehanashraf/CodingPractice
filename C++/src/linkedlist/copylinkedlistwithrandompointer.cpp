@@ -7,7 +7,7 @@
 
 // C++ program to clone a linked list with next
 // and arbit pointers in O(n) time
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 // Structure of linked list Node

@@ -8,7 +8,8 @@
 #include "utility.h"
 #include "print.h"
 
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <iostream>
 using namespace std;
 
 /******************************************************************************************

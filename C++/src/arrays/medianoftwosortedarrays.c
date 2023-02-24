@@ -62,7 +62,7 @@ int getMedian(int ar1[], int ar2[], int n)
 }
 
 /* Driver program to test above function */
-bool runMedianofTwoSortedArrays()
+bool runMedianofTwoSortedArrays(void)
 {
     int ar1[] = {1, 12, 15, 26, 38};
     int ar2[] = {2, 13, 17, 30, 45};

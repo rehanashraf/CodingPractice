@@ -29,7 +29,8 @@ bool runFirstUniqChar();
 int firstUniqChar(std::string s);
 
 int firstUniqChar(std::string s) {
-    int rv = -1, length;
+    int rv = -1;
+    size_t length = 0;
     std::vector<int> alphabets;
     
     length = s.length();
