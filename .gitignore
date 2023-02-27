@@ -14,6 +14,7 @@ local.properties
 .loadpath
 .recommenders
 */Debug/
+*/build/
 
 # External tool builders
 .externalToolBuilders/
@@ -85,3 +86,6 @@ leetcodeXcode/source/.DS_Store
 .DS_Store
 *.pbxproj
 *.xcuserstate
+
+*.vscode/*
+leetcode.xcodeproj/
