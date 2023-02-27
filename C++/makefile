@@ -1,5 +1,6 @@
 AT := @
 CC := gcc
+CXX := g++
 
 TARGET_EXEC := main
 SRC_DIRS := src
@@ -10,6 +11,9 @@ BUILD_DIR := build
 BIN_DIR := $(BUILD_DIR)
 OBJ_DIR := $(BUILD_DIR)/obj
 BIN := $(BIN_DIR)/$(TARGET_EXEC)
+
+DIFF_SRC_FOLDER ?= .
+CUR_BASE_DIR := $(notdir $(CURDIR:%/=%))
 
 comma := ,
 empty :=
@@ -58,8 +62,13 @@ $(BIN): $(COBJS) $(CPPOBJS)
 	$(AT) echo "Done Building $@"
 
 dump:
+<<<<<<< HEAD
 	$(AT) echo "C source \n$(subst $(space),$(newline),$(CSOURCE))\n"
 	$(AT) echo "C objs \n$(subst $(space),$(newline),$(COBJS))\n"
+=======
+	$(AT) echo "C source $(newline)$(subst $(space),$(newline),$(CSOURCE))$(newline)"
+	$(AT) echo "C objs $(newline)$(subst $(space),$(newline),$(COBJS))$(newline)"
+>>>>>>> ef580dd (Created makefile to build c and C++ code locally without any IDE)
 
 .PHONY: clean dump
 clean:
