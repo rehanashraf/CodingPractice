@@ -6,8 +6,10 @@
  */
 
 
-#include <stdio.h>
-#include <stdbool.h>
+#include <iostream>
+#include <vector>
+
+using namespace std;
 
 /* This function returns median of ar1[] and ar2[].
    Assumptions in this function:
@@ -61,6 +63,39 @@ int getMedian(int ar1[], int ar2[], int n)
     return (m1 + m2)/2;
 }
 
+double getMedianExtraSpace(vector<int>& nums1, vector<int>& nums2) {
+    vector<int> vec;
+    int m, n, i , j;
+    m = nums1.size();
+    n = nums2.size();
+    i = j = 0;
+
+    for (int k = 0; k < m+n && i < m && j < n; k++) {
+        if (nums1[i] < nums2[j]) {
+            vec.push_back(nums1[i++]);
+        } else {
+            vec.push_back(nums2[j++]);
+        }
+    }
+    if (i < m) {
+        for (;i < m; i++) {
+            vec.push_back(nums1[i]);
+        }
+    } else {
+        for (;j < n; j++) {
+            vec.push_back(nums2[j]);
+        }
+    }
+    double rv = 0.0;
+    int index = vec.size()/2;
+    if (vec.size()%2 == 0) {
+        double sum = vec[index] + vec[index-1];
+        rv = sum/2;
+    } else {
+        rv = vec[index];
+    }
+    return rv;
+}
 /* Driver program to test above function */
 bool runMedianofTwoSortedArrays(void)
 {

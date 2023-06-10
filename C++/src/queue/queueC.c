@@ -59,6 +59,16 @@ errors_e queue_enqueue(queue_t *queue, QUEUE_TYPE *data_array, size_t length)
 }
 errors_e queue_dequeue(queue_t *queue, QUEUE_TYPE *data_array, size_t length)
 {
+    errors_e err = ERROR_OK;
+    if (queue == NULL) {
+        err = ERROR_NULL_POINTER;
+        return err;
+    }
+    size_t lenToTake = length < queue->size ? length : queue->size;
+    for (size_t i = 0; i < lenToTake; i++) {
+        data_array[i] = queue->buffer[queue->front];
+        queue->front = (queue->front + 1) % queue->capacity;
+    }
     return 0;
 }
 errors_e queue_isFull(queue_t *queue, bool *isFull);

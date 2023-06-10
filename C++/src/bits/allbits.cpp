@@ -11,9 +11,63 @@
 #define	CLEARBIT(byte, nbit)	(byte & ~(1U << nbit))
 #define	BITCHECK(byte, nbit)	(byte & (1U << nbit))
 #define SWAPNIBBLE(byte)		(((byte & 0x0F) << 4) | ((byte & 0xF0) >> 4))
+#define SWAP_UINT16(x)          (((x) >> 8) | ((x) << 8))
+#define SWAP_UINT32(x)          (((x) >> 24) | (((x) & 0x00FF0000) >> 8) | (((x) & 0x0000FF00) << 8) | ((x) << 24))
 
 #define C_TO_F(deg_c)	(((float)(deg_c)*9)/5 + 32)
 #define INT_BITS 32
+
+typedef enum {
+    LITTLE_ENDIAN,
+    BIG_ENDIAN,
+} ENDINESS;
+
+//! Byte swap unsigned short
+uint16_t swap_uint16( uint16_t val )
+{
+    return (val << 8) | (val >> 8 );
+}
+
+//! Byte swap short
+int16_t swap_int16( int16_t val )
+{
+    return (val << 8) | ((val >> 8) & 0xFF);
+}
+
+//! Byte swap unsigned int
+uint32_t swap_uint32( uint32_t val )
+{
+    val = ((val << 8) & 0xFF00FF00 ) | ((val >> 8) & 0xFF00FF );
+    return (val << 16) | (val >> 16);
+}
+
+//! Byte swap int
+int32_t swap_int32( int32_t val )
+{
+    val = ((val << 8) & 0xFF00FF00) | ((val >> 8) & 0xFF00FF );
+    return (val << 16) | ((val >> 16) & 0xFFFF);
+}
+
+int64_t swap_int64( int64_t val )
+{
+    val = ((val << 8) & 0xFF00FF00FF00FF00ULL ) | ((val >> 8) & 0x00FF00FF00FF00FFULL );
+    val = ((val << 16) & 0xFFFF0000FFFF0000ULL ) | ((val >> 16) & 0x0000FFFF0000FFFFULL );
+    return (val << 32) | ((val >> 32) & 0xFFFFFFFFULL);
+}
+
+uint64_t swap_uint64( uint64_t val )
+{
+    val = ((val << 8) & 0xFF00FF00FF00FF00ULL ) | ((val >> 8) & 0x00FF00FF00FF00FFULL );
+    val = ((val << 16) & 0xFFFF0000FFFF0000ULL ) | ((val >> 16) & 0x0000FFFF0000FFFFULL );
+    return (val << 32) | (val >> 32);
+}
+
+ENDINESS TestByteOrder()
+{
+   short int word = 0x0001;
+   char *byte = (char *) &word;
+   return(byte[0] ? LITTLE_ENDIAN : BIG_ENDIAN);
+}
 
 uint8_t flip_hi_low(uint8_t n)
 {
@@ -197,6 +251,11 @@ bool isPowerOfTwo(int n)
         n = n/2;
     }
     return 1;
+}
+
+int isPowerof2(int x)
+{
+    return (x && !(x & x-1));
 }
 
 uint32_t changeEndiness(uint32_t num)
