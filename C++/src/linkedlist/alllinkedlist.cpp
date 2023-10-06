@@ -102,6 +102,72 @@ void deleteNodeformList(ListNode *head, int data)
 #endif
 }
 
+void addNodeToList(ListNode **list, int value) {
+    if(list == NULL) {
+      return;
+    }
+
+    ListNode *head = *list;
+    if (head == NULL) {
+      head = (ListNode *)malloc(sizeof(ListNode));
+      if (head == NULL) {
+        return;
+      }
+      head->val = value;
+      head->next = NULL;
+      *list = head;
+      return;
+    }
+
+    while(head->next != NULL) {
+      head = head->next;
+    }
+
+    head->next = (ListNode *)malloc(sizeof(ListNode));
+    if (head->next == NULL) {
+        return;
+      }
+    head->next->val = value;
+    head->next->next = NULL;
+}
+
+ListNode* removeNodeFromList(ListNode **list, int value) {
+    bool found = false;
+    ListNode *rv, *current, *previous;
+
+    rv = current = previous = NULL;
+
+    if (list == NULL || *list == NULL)
+    {
+      return rv;
+    }
+
+    current = *list;
+
+    while(current != NULL) {
+      if (current->val == value) {
+        found = true;
+        break;
+      }
+      previous = current;
+      current = current->next;
+    }
+
+    if (found) {
+        rv = current;
+        if (previous == NULL) {
+            if (current->next == NULL) {
+                *list = NULL;
+            } else {
+                *list = current->next;
+            }
+        } else {
+            previous->next = current->next;
+        }
+    }
+    return rv;
+}
+
 /*  Returns true if the number of elements in the list are an even number */
 bool isListEven(ListNode *head)
 {
