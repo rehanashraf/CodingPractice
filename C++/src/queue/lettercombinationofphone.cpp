@@ -27,7 +27,7 @@ std::vector<std::string> letterCombinations(std::string digits);
 bool runLetterCombinations();
 long int getTotalCombinations(std::string& data);
 
-std::vector<std::string> data{"abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+std::vector<std::string> phoneletters = {"abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
 
 std::vector<std::string> letterCombinations(std::string digits)
 {
@@ -64,10 +64,10 @@ std::vector<std::string> letterCombinations(std::string digits)
         }
         else
         {
-            loopSize = data[digits[subString.length()] - 50].length();
+            loopSize = phoneletters[digits[subString.length()] - 50].length();
             for(int i = 0; i < loopSize; i++)
             {
-                ch = data[digits[subString.length()] - 50][i];
+                ch = phoneletters[digits[subString.length()] - 50][i];
                 qString.push(subString + ch);
             }
         }

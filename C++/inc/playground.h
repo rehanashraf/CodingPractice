@@ -11,5 +11,6 @@
 
 void testSwitchCases();
 void sameLinePrint();
+uint64_t getTimeUTC(void);
 
 #endif /* playground_h */

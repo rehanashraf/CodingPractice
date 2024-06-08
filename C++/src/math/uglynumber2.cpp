@@ -48,7 +48,7 @@ int nthUglyNumber(int n) {
             
             if (count == n)
             {
-                rv = i;
+                rv = (int)i;
                 return rv;
             }
         }

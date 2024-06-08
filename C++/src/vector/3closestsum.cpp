@@ -6,7 +6,9 @@
  */
 
 // C++ implementation of the approach
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 // Function to return the sum of a
@@ -52,7 +54,7 @@ int threeClosestSumDoublePointer(vector<int>& arr, int x)
         // Two pointers initially pointing at
         // the last and the element
         // next to the fixed element
-        int ptr1 = i + 1, ptr2 = arr.size() - 1;
+        size_t ptr1 = i + 1, ptr2 = arr.size() - 1;
 
         // While there could be more pairs to check
         while (ptr1 < ptr2) {

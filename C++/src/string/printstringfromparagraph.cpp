@@ -7,7 +7,8 @@
 
 // C++ program to extract words from
 // a strung using stringstream
-#include<bits/stdc++.h>
+#include<iostream>
+#include <sstream>
 using namespace std;
 
 void printWords(string str)

@@ -24,7 +24,8 @@ bool runSingleNumber(void);
 
 int singleNumber(vector<int>& nums)
 {
-	int rv = 0, arraySize = 0;
+    int rv = 0;
+    size_t arraySize = 0;
 
 	arraySize = nums.size();
 	for(int i = 0; i < arraySize; i++)

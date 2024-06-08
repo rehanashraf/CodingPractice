@@ -6,7 +6,7 @@
  */
 
 // C++ program for insertion sort
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 #include "print.h"
 

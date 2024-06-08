@@ -24,6 +24,25 @@ bool runReverseList(void);
 ListNode* reverseList(ListNode* head);
 
 
+ListNode* rList(ListNode* head) {
+    ListNode *previous, *temp;
+
+    if (head == NULL) {
+        return head;
+    }
+    
+    previous = temp = NULL;
+    while (head && head->next) {
+        temp = head->next;
+        head->next = previous;
+        previous = head;
+        head = temp;
+    }
+    head->next = previous;
+    
+    return head;
+}
+
 ListNode* reverseList(ListNode* head) {
     ListNode *rv = nullptr, *previous = nullptr, *temp = nullptr;
     

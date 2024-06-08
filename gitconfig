@@ -1,0 +1,31 @@
+[user]
+	name = Rehan Ashraf
+	email = rashraf.cheema@gmail.com
+[color]
+	ui = auto
+[core]
+	editor = nano
+[alias]
+	s = status -s
+	d = diff
+	ds = diff --stat
+	dc = diff --cached
+	co = checkout
+	cob = checkout -b
+	del = branch -D    
+	br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	cane = commit --amend --no-edit
+	
+	lg = !git log --pretty=format:\"%C(magenta)%h %Creset%C(yellow)%ad%Creset%d -%C(red)%d%Creset %C(cyan)%s %C(green)(%cr) [%an]\" --date=short
+	lgs = !git log --stat --pretty=format:\"%C(magenta)%h %Creset%C(yellow)%ad%Creset%d -%C(red)%d%Creset %C(cyan)%s %C(green)(%cr) [%an]\" --date=short
+	
+	# list aliases
+	alias = "!git config -l | grep alias | cut -c 7-"
+	root = rev-parse --show-toplevel
+	dir = rev-parse --git-dir
+[commit]
+	template = /Users/asrehan/.git-commit-template
+[log]
+ 	date = relative
+[format]
+ 	#pretty = format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset

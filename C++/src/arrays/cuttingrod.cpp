@@ -50,8 +50,8 @@ int cutRodRecursion(int price[], int n)
 /* Driver program to test above functions */
 bool runCutRod()
 {
-    int arr[] = {1, 5, 8, 9, 10, 17, 17, 20};
-    int size = sizeof(arr)/sizeof(arr[0]);
+//    int arr[] = {1, 5, 8, 9, 10, 17, 17, 20};
+//    int size = sizeof(arr)/sizeof(arr[0]);
 //    printf("Maximum Obtainable Value is %dn", cutRod(arr, size));
     getchar();
     return 0;

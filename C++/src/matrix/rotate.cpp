@@ -66,7 +66,7 @@ void rotate90Clockwise(std::vector<std::vector<int>>& matrix)
 		}
 	}*/
 
-	int rows, cols;
+	size_t rows, cols;
 	rows = matrix.size();
 	cols = matrix[0].size();
 
@@ -78,7 +78,7 @@ void rotate90Clockwise(std::vector<std::vector<int>>& matrix)
 // you can do that by (reverse items in rows or swap cols) and then (transpose or transposeleft)
 void rotate90AntiClockwise(std::vector<std::vector<int>>& matrix)
 {
-	int rows, cols;
+	size_t rows, cols;
 	rows = matrix.size();
 	cols = matrix[0].size();
 
@@ -100,7 +100,7 @@ void transpose(int A[][N])
 {
 	for (int i = 0; i < N; i++)
 		for (int j = i+1; j < N; j++)
-			swap(A[i][j], A[j][i]);
+            swap(&A[i][j], &A[j][i]);
 }
 
 void sawpCols(int a[][N])
@@ -119,34 +119,34 @@ void sawpCols(int a[][N])
 
 void swapCols(std::vector<std::vector<int>>& matrix)
 {
-	int rows, cols;
+	size_t rows, cols;
 	rows = matrix.size();
 	cols = matrix[0].size();
 
-	for(int i = 0; i < rows; i++)
-		for (int j = 0, k = cols - 1; j < cols/2; j++, k--)
-			swap(matrix[i][j], matrix[i][k]);
+	for(uint8_t i = 0; i < rows; i++)
+		for (uint8_t j = 0, k = cols - 1; j < cols/2; j++, k--)
+            swap(&matrix[i][j], &matrix[i][k]);
 
 }
 
 void transposefromright(std::vector<std::vector<int>>& matrix)
 {
-	int rows, cols;
+	size_t rows, cols;
 	rows = matrix.size();
 	cols = matrix[0].size();
 
 	for (int i = 0; i < rows ; i++)
 		for (int j = i+1; j < cols; j++)
-			swap(matrix[i][cols -j -1], matrix[j][cols -i -1]);
+            swap(&matrix[i][cols -j -1], &matrix[j][cols -i -1]);
 }
 
 void transposefromleft(std::vector<std::vector<int>>& matrix)
 {
-	int rows, cols;
+	size_t rows, cols;
 	rows = matrix.size();
 	cols = matrix[0].size();
 
 	for (int i = 0; i < rows; i++)
 		for (int j = 0; j < cols; j++)
-			swap(matrix[i][j], matrix[j][i]);
+            swap(&matrix[i][j], &matrix[j][i]);
 }

@@ -57,7 +57,6 @@ int BinarySearchR(uint8_t *buffer,int start, int end, uint8_t data)
 
 int BinarySearchFirstO(uint8_t *buffer,int *len, uint8_t data)
 {
-	int rv = -1;
 	int result, start, end, mid;
 
 	result = -1;
@@ -86,7 +85,6 @@ int BinarySearchFirstO(uint8_t *buffer,int *len, uint8_t data)
 
 int BinarySearchLastO(uint8_t *buffer,int *len, uint8_t data)
 {
-	int rv = -1;
 	int result, start, end, mid;
 
 	result = -1;

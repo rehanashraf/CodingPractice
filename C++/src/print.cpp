@@ -123,7 +123,7 @@ void Myprintf(char* format,...)
 char *convert(unsigned int num, int base)
 {
     static char Representation[]= "0123456789ABCDEF";
-    static char buffer[50];
+    static char buffer[50] = {0};
     char *ptr;
 
     ptr = &buffer[49];

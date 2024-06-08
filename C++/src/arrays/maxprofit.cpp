@@ -55,7 +55,6 @@ int maxProfit(std::vector<int>& prices) {
 
 bool runMaxProfit() {
     bool rv = true;
-    int maxprofit = 0;
     std::vector<int> list1, list2, list3;
     
     list1.push_back(7);

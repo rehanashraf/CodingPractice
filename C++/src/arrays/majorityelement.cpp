@@ -5,7 +5,7 @@
  *      Author: rehanashraf
  */
 
-#include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 // Double For loops

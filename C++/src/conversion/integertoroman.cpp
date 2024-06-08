@@ -35,7 +35,6 @@ std::string intToRoman(int num);
 
 std::string intToRoman(int num) {
     std::string rv = "";
-    int remainder = 0;
     
     if (num < 1)
         return rv;

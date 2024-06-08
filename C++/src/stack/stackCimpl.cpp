@@ -21,7 +21,7 @@ struct stack
 typedef struct stack cstack_t;
 
 int stack_init(cstack_t *stack,int size);
-int cstack_top(cstack_t *stack, char *ch);
+int stack_top(cstack_t *stack, char *ch);
 int stack_pop(cstack_t *stack, char *data, int bytes);
 int stack_push(cstack_t *stack, const char *data, int bytes);
 int stack_cleanup(cstack_t *stack);

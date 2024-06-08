@@ -36,7 +36,7 @@ std::vector<std::vector<int>> threeSum(std::vector<int>& nums) {
 
 
 	int j = 0;
-	int k = nums.size() -1;
+	size_t k = nums.size() -1;
     for (int i = 0; i < nums.size();i++)
     {
     	j = i + 1;

@@ -6,7 +6,8 @@
  */
 
 
-#include<bits/stdc++.h>
+#include<iostream>
+#include<vector>
 using namespace std;
 
 // Driver function to sort the vector elements

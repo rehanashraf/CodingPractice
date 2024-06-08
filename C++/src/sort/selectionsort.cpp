@@ -9,7 +9,7 @@
 #include "print.h"
 
 // C++ program for implementation of selection sort
-#include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 void selectionSort(int arr[], int n)

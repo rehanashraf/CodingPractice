@@ -26,6 +26,7 @@
 long int find_max_sum(int *array, int len);
 int maxSubArray(std::vector<int>& nums)
 {
+  // Kadane's algorithm
 	int rv, currentSum, overallSum;
 
 	rv = currentSum = 0;

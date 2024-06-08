@@ -12,6 +12,26 @@
 bool runLinkedListHasCycle(void);
 bool linkedListHasCycle(ListNode *head);
 
+ListNode *detectCycle(ListNode *head) {
+    ListNode *slowPtr = NULL, *fastPtr= NULL;
+    ListNode *rv = NULL;
+    fastPtr = slowPtr = head;
+
+    while(fastPtr && fastPtr->next) {
+        slowPtr = slowPtr->next;
+        fastPtr = fastPtr->next->next;
+        if (slowPtr == fastPtr) {
+            rv = head;
+            while(rv != slowPtr){
+                rv = rv->next;
+                slowPtr = slowPtr->next;
+            }
+            return rv;
+        }
+    }
+    return rv;
+}
+
 bool linkedListHasCycle(ListNode *head) {
     bool rv = false;
     ListNode *slowPtr, *fastPtr;
