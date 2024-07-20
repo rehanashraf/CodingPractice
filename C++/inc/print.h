@@ -20,52 +20,53 @@ using namespace std;
 
 struct ListNode
 {
-     int val;
-     ListNode *next;
-     ListNode(int x) : val(x), next(NULL) {}
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
 };
 
 struct Point
 {
     int x;
     int y;
-    Point(int x = 0, int y = 0): x(x), y(y) {}
+    Point(int x = 0, int y = 0) : x(x), y(y) {}
 };
 
-struct TreeNode {
-	int val;
-	TreeNode *left;
-	TreeNode *right;
-	TreeNode() : val(0), left(nullptr), right(nullptr) {}
-	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-	TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+struct TreeNode
+{
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-//template <typename T>
-void printVector(std::vector<int>& list);
-void printVector(std::vector<char>& list);
-void printVector(std::vector<std::string>& list);
+// template <typename T>
+void printVector(std::vector<int> &list);
+void printVector(std::vector<char> &list);
+void printVector(std::vector<std::string> &list);
 void printList(ListNode *list);
-void Myprintf(char *,...);                 //Our printf function
-char* convert(unsigned int, int);         //Convert integer number into octal, hex, etc.
+void Myprintf(char *, ...);       // Our printf function
+char *convert(unsigned int, int); // Convert integer number into octal, hex, etc.
 void print2DVector(std::vector<std::vector<char>> &grid);
 void print2DVector(std::vector<std::vector<int>> &grid);
 void printPairs(std::vector<std::pair<int, int>> &list);
 void printArray(int arr[], int n);
 
 template <typename T>
-void printTVector(const std::vector<T>& list)
+void printTVector(const std::vector<T> &list)
 {
-    for(int i = 0; i < list.size(); i++)
+    for (int i = 0; i < list.size(); i++)
     {
         std::cout << list[i] << " ";
     }
 }
 
 template <typename T>
-void print2DTVector(const std::vector<const std::vector<T>>& list)
+void print2DTVector(const std::vector<const std::vector<T>> &list)
 {
-    for(int i = 0; i < list.size(); i++)
+    for (int i = 0; i < list.size(); i++)
     {
         printTVector(list[i]);
         std::cout << std::endl;

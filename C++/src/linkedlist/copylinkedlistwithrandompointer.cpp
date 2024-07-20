@@ -14,7 +14,7 @@ using namespace std;
 struct Node
 {
     int data;
-    Node *next,*random;
+    Node *next, *random;
     Node(int x)
     {
         data = x;
@@ -34,9 +34,9 @@ void print(Node *start)
     }
 }
 
-Node* clone(Node *start)
+Node *clone(Node *start)
 {
-    Node* curr = start, *temp;
+    Node *curr = start, *temp;
 
     // insert additional node after
     // every node of original list
@@ -56,16 +56,15 @@ Node* clone(Node *start)
     // newly added nodes
     while (curr)
     {
-        if(curr->next)
-            curr->next->random = curr->random ?
-                                 curr->random->next : curr->random;
+        if (curr->next)
+            curr->next->random = curr->random ? curr->random->next : curr->random;
 
         // move to the next newly added node by
         // skipping an original node
-        curr = curr->next?curr->next->next:curr->next;
+        curr = curr->next ? curr->next->next : curr->next;
     }
 
-    Node* original = start, *copy = start->next;
+    Node *original = start, *copy = start->next;
 
     // save the start of copied linked list
     temp = copy;
@@ -74,9 +73,9 @@ Node* clone(Node *start)
     while (original && copy)
     {
         original->next =
-         original->next? original->next->next : original->next;
+            original->next ? original->next->next : original->next;
 
-        copy->next = copy->next?copy->next->next:copy->next;
+        copy->next = copy->next ? copy->next->next : copy->next;
         original = original->next;
         copy = copy->next;
     }
@@ -86,7 +85,7 @@ Node* clone(Node *start)
 
 int runClone()
 {
-    Node* start = new Node(1);
+    Node *start = new Node(1);
     start->next = new Node(2);
     start->next->next = new Node(3);
     start->next->next->next = new Node(4);
@@ -100,13 +99,13 @@ int runClone()
 
     // 3's and 4's random points to 5
     start->next->next->random =
-                    start->next->next->next->next;
+        start->next->next->next->next;
     start->next->next->next->random =
-                    start->next->next->next->next;
+        start->next->next->next->next;
 
     // 5's random points to 2
     start->next->next->next->next->random =
-                                      start->next;
+        start->next;
 
     cout << "Original list : \n";
     print(start);

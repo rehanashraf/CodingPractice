@@ -18,64 +18,77 @@
 #include "print.h"
 
 bool runMergeTwoLists(void);
-ListNode* mergeTwoLists(ListNode* l1, ListNode* l2);
+ListNode *mergeTwoLists(ListNode *l1, ListNode *l2);
 
-ListNode* mTwoLists(ListNode* list1, ListNode* list2) {
-        ListNode *head = NULL, *tail = NULL;
+ListNode *mTwoLists(ListNode *list1, ListNode *list2)
+{
+    ListNode *head = NULL, *tail = NULL;
 
-        if (list1 == NULL) {
-            return list2;
-        }
-        if (list2 == NULL) {
-            return list1;
-        }
-        if (list1->val < list2->val) {
-            head = list1;
+    if (list1 == NULL)
+    {
+        return list2;
+    }
+    if (list2 == NULL)
+    {
+        return list1;
+    }
+    if (list1->val < list2->val)
+    {
+        head = list1;
+        list1 = list1->next;
+    }
+    else
+    {
+        head = list2;
+        list2 = list2->next;
+    }
+    tail = head;
+
+    while (list1 != NULL && list2 != NULL)
+    {
+        if (list1->val < list2->val)
+        {
+            tail->next = list1;
             list1 = list1->next;
-        } else {
-            head = list2;
+        }
+        else
+        {
+            tail->next = list2;
             list2 = list2->next;
         }
-        tail = head;
+        tail = tail->next;
+    }
 
-        while (list1 != NULL && list2 != NULL) {
-            if (list1->val < list2->val) {
-                tail->next = list1;
-                list1 = list1->next;
-            } else {
-                tail->next = list2;
-                list2 = list2->next;
-            }
-            tail = tail->next;
-        }
-
-        if (list1) {
-            tail->next = list1;
-        }
-        if (list2) {
-            tail->next = list2;
-        }
-        return head;
+    if (list1)
+    {
+        tail->next = list1;
+    }
+    if (list2)
+    {
+        tail->next = list2;
+    }
+    return head;
 }
 
-ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-//    ListNode *rv, *it1, *it2, *temp1, *temp2;
+ListNode *mergeTwoLists(ListNode *l1, ListNode *l2)
+{
+    //    ListNode *rv, *it1, *it2, *temp1, *temp2;
     ListNode *rv, *it1, *it2, *temp;
     rv = temp = nullptr;
-    
+
     it1 = l1;
     it2 = l2;
-    
+
     if (it1 == nullptr)
         return it2;
     if (it2 == nullptr)
         return it1;
-    
+
     rv = new ListNode(0);
     temp = rv;
-    while(it1 && it2)
+    while (it1 && it2)
     {
-        if ( it1->val < it2->val)
+        if (it1->val < it2->val)
         {
             temp->next = new ListNode(it1->val);
             temp = temp->next;
@@ -84,7 +97,7 @@ ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
         else if (it1->val > it2->val)
         {
             temp->next = new ListNode(it2->val);
-                        temp = temp->next;
+            temp = temp->next;
             it2 = it2->next;
         }
         else
@@ -97,12 +110,12 @@ ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
             it2 = it2->next;
         }
     }
-    
+
     if ((it1 == nullptr) && (it2 != nullptr))
         temp->next = it2;
     else if ((it2 == nullptr) && (it1 != nullptr))
         temp->next = it1;
-    
+
     return rv->next;
 }
 
@@ -112,22 +125,22 @@ bool runMergeTwoLists(void)
     ListNode *list1, *list2, *iterator1, *iterator2 = nullptr;
     list1 = iterator1 = new ListNode(1);
     list2 = iterator2 = new ListNode(2);
-    
-    for(int i = 1; i <= 3; i++)
+
+    for (int i = 1; i <= 3; i++)
     {
-        iterator1->next = new ListNode(i*2);
-        iterator2->next = new ListNode(i*3);
-        
+        iterator1->next = new ListNode(i * 2);
+        iterator2->next = new ListNode(i * 3);
+
         iterator1 = iterator1->next;
         iterator2 = iterator2->next;
     }
     iterator1 = iterator2 = nullptr;
-    
+
     printList(list1);
     printList(list2);
     list1 = mergeTwoLists(list1, list2);
-//    reverseList(list2);
+    //    reverseList(list2);
     printList(list1);
-//    printList(list2);
+    //    printList(list2);
     return rv;
 }

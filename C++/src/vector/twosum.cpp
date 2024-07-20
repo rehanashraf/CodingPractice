@@ -22,16 +22,16 @@ using namespace std;
 
 #include "print.h"
 
-vector<int> twoSumBruteForce(vector<int>& nums, int target)
+vector<int> twoSumBruteForce(vector<int> &nums, int target)
 {
-    vector<int> rv ;
+    vector<int> rv;
     size_t siezeoflist = nums.size();
 
-    for(int i = 0; i < siezeoflist; i++)
+    for (int i = 0; i < siezeoflist; i++)
     {
-        for(int j = i+1; j < siezeoflist; j++)
+        for (int j = i + 1; j < siezeoflist; j++)
         {
-            if((nums[i] + nums[j]) == target)
+            if ((nums[i] + nums[j]) == target)
             {
                 rv.push_back(i);
                 rv.push_back(j);

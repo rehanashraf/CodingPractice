@@ -26,5 +26,5 @@ int graph_has_edge(Graph, int source, int sink);
 /* supplying data as final parameter to f */
 /* no particular order is guaranteed */
 void graph_foreach(Graph g, int source,
-        void (*f)(Graph g, int source, int sink, void *data),
-        void *data);
+                   void (*f)(Graph g, int source, int sink, void *data),
+                   void *data);

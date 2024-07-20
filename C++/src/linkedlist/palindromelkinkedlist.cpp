@@ -26,15 +26,16 @@
 #include <vector>
 
 bool runIsPalindrome(void);
-bool isLinkedListPalindrome(ListNode* head);
+bool isLinkedListPalindrome(ListNode *head);
 
-bool isLinkedListPalindrome(ListNode* head) {
+bool isLinkedListPalindrome(ListNode *head)
+{
     bool rv = true;
     std::vector<int> array;
     ListNode *iterator;
-    
+
     iterator = head;
-    
+
     if (iterator == nullptr || iterator->next == nullptr)
     {
         rv = false;
@@ -45,9 +46,9 @@ bool isLinkedListPalindrome(ListNode* head) {
         array.push_back(iterator->val);
         iterator = iterator->next;
     }
-    
+
     iterator = head;
-    for(uint8_t i = array.size(); i >= 0; i--)
+    for (uint8_t i = array.size(); i >= 0; i--)
     {
         if (array[i] != iterator->val)
         {
@@ -55,7 +56,7 @@ bool isLinkedListPalindrome(ListNode* head) {
             return rv;
         }
     }
-    
+
     return rv;
 }
 
@@ -65,17 +66,17 @@ bool runIsLinkedListPalindrome(void)
     ListNode *list1, *list2, *iterator1, *iterator2 = nullptr;
     list1 = iterator1 = new ListNode(1);
     list2 = iterator2 = new ListNode(2);
-    
-    for(int i = 1; i <= 3; i++)
+
+    for (int i = 1; i <= 3; i++)
     {
-        iterator1->next = new ListNode(i*2);
-        iterator2->next = new ListNode(i*3);
-        
+        iterator1->next = new ListNode(i * 2);
+        iterator2->next = new ListNode(i * 3);
+
         iterator1 = iterator1->next;
         iterator2 = iterator2->next;
     }
     std::cout << isLinkedListPalindrome(list1) << std::endl;
     std::cout << isLinkedListPalindrome(list2) << std::endl;
-    
+
     return rv;
 }

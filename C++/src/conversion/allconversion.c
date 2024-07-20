@@ -66,14 +66,16 @@ int32_t stringToBytes(uint8_t *string, uint8_t *result, int32_t size)
 
 int8_t hex2Ascii(int8_t c)
 {
-    if ((c >= 0) && (c <= 9)) {
+    if ((c >= 0) && (c <= 9))
+    {
         return c + '0';
-    } else if ((c >= 10) && (c <= 15)) {
+    }
+    else if ((c >= 10) && (c <= 15))
+    {
         return (c - 10 + 'A');
     }
 
     return 0;
-
 }
 
 // function to convert decimal to binary
@@ -84,7 +86,8 @@ void decToBinary(int n)
 
     // counter for binary array
     int i = 0;
-    while (n > 0) {
+    while (n > 0)
+    {
 
         // storing remainder in binary array
         binaryNum[i] = n % 2;

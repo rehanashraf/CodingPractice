@@ -32,14 +32,15 @@ What if the inputs contain unicode characters? How would you adapt your solution
 bool runIsAnagram();
 bool isAnagram(std::string s, std::string t);
 
-bool isAnagram(std::string s, std::string t) {
+bool isAnagram(std::string s, std::string t)
+{
     bool rv = true;
     size_t lengths, lengtht;
     std::vector<int> alphabets_s, alphabets_t;
-    
+
     lengths = s.length();
     lengtht = t.length();
-    
+
     if (lengths == 0 && lengtht == 0)
         return rv;
     else if (lengths == 0 || lengtht == 0)
@@ -47,22 +48,22 @@ bool isAnagram(std::string s, std::string t) {
         rv = false;
         return rv;
     }
-    
-    for( int i = 0; i < 26; i++)
+
+    for (int i = 0; i < 26; i++)
     {
         alphabets_s.push_back(0);
         alphabets_t.push_back(0);
     }
-    
+
     for (int i = 0; i < lengths; i++)
-        alphabets_s[ s[i] - 97]++;
+        alphabets_s[s[i] - 97]++;
 
     for (int i = 0; i < lengtht; i++)
-        alphabets_t[ t[i] - 97]++;
-    
+        alphabets_t[t[i] - 97]++;
+
     for (int i = 0; i < 26; i++)
     {
-        if(alphabets_s[i] != alphabets_t[i])
+        if (alphabets_s[i] != alphabets_t[i])
         {
             rv = false;
             return rv;
@@ -75,19 +76,18 @@ bool runIsAnagram()
 {
     bool rv = true;
     std::string s, t;
-    
+
     s = "";
     t = "";
-    std::cout << s << " " << t << " " << isAnagram(s,t) << std::endl;
-    
+    std::cout << s << " " << t << " " << isAnagram(s, t) << std::endl;
+
     s = "anagram";
     t = "nagaram";
-    std::cout << s << " " << t << " " << isAnagram(s,t) << std::endl;
-    
+    std::cout << s << " " << t << " " << isAnagram(s, t) << std::endl;
+
     s = "rat";
     t = "car";
-    std::cout << s << " " << t << " " << isAnagram(s,t) << std::endl;
-   
-   
+    std::cout << s << " " << t << " " << isAnagram(s, t) << std::endl;
+
     return rv;
 }

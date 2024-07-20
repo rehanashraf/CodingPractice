@@ -16,9 +16,8 @@
 
  Input: [1,8,6,2,5,4,8,3,7]
  Output: 49
- 
- */
 
+ */
 
 #include <stdio.h>
 #include <vector>
@@ -26,19 +25,19 @@
 
 #include "print.h"
 #include "macros.h"
-int maxAreaBruteForce(std::vector<int>& height)
+int maxAreaBruteForce(std::vector<int> &height)
 {
     int returnValue = 0, currentMaxArea = 0, longestMaxArea = 0, length = 0, width = 0;
     size_t arrayLength = 0;
-    
+
     arrayLength = height.size();
-    
-    for(int i = 0; i < arrayLength - 1; i++)
+
+    for (int i = 0; i < arrayLength - 1; i++)
     {
-//        currentMaxArea =
-        for(int j = i + 1; j < arrayLength; j++)
+        //        currentMaxArea =
+        for (int j = i + 1; j < arrayLength; j++)
         {
-            if(height[i] > height[j])
+            if (height[i] > height[j])
             {
                 length = height[j];
             }
@@ -47,9 +46,9 @@ int maxAreaBruteForce(std::vector<int>& height)
                 length = height[i];
             }
             width = j - i;
-            
+
             currentMaxArea = length * width;
-            if(currentMaxArea > longestMaxArea)
+            if (currentMaxArea > longestMaxArea)
             {
                 longestMaxArea = currentMaxArea;
             }
@@ -59,11 +58,12 @@ int maxAreaBruteForce(std::vector<int>& height)
     return returnValue;
 }
 
-int maxAreaDoublePointer(std::vector<int>& height)
+int maxAreaDoublePointer(std::vector<int> &height)
 {
     int maxarea = 0, l = 0;
     size_t r = height.size() - 1;
-    while (l < r) {
+    while (l < r)
+    {
         maxarea = MAX(maxarea, MIN(height[l], height[r]) * (int)(r - l));
         if (height[l] < height[r])
             l++;
@@ -76,10 +76,10 @@ int maxAreaDoublePointer(std::vector<int>& height)
 bool runMaxArea()
 {
     bool retunValue = true;
-    
-    std::vector<int> firstArray{1,8,6,2,5,4,8,3,7};
+
+    std::vector<int> firstArray{1, 8, 6, 2, 5, 4, 8, 3, 7};
     printVector(firstArray);
     std::cout << "Max Area is " << maxAreaBruteForce(firstArray) << std::endl;
-    
+
     return retunValue;
 }

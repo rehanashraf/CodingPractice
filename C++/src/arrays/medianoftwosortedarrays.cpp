@@ -5,7 +5,6 @@
  *      Author: rehanashraf
  */
 
-
 #include <iostream>
 #include <vector>
 
@@ -17,7 +16,7 @@ using namespace std;
    Both have n elements */
 int getMedian(int ar1[], int ar2[], int n)
 {
-    int i = 0;  /* Current index of i/p array ar1[] */
+    int i = 0; /* Current index of i/p array ar1[] */
     int j = 0; /* Current index of i/p array ar2[] */
     int count;
     int m1 = -1, m2 = -1;
@@ -44,54 +43,67 @@ int getMedian(int ar1[], int ar2[], int n)
             m2 = ar1[0];
             break;
         }
-         /* equals sign because if two
-            arrays have some common elements */
+        /* equals sign because if two
+           arrays have some common elements */
         if (ar1[i] <= ar2[j])
         {
-            m1 = m2;  /* Store the prev median */
+            m1 = m2; /* Store the prev median */
             m2 = ar1[i];
             i++;
         }
         else
         {
-            m1 = m2;  /* Store the prev median */
+            m1 = m2; /* Store the prev median */
             m2 = ar2[j];
             j++;
         }
     }
 
-    return (m1 + m2)/2;
+    return (m1 + m2) / 2;
 }
 
-double getMedianExtraSpace(vector<int>& nums1, vector<int>& nums2) {
+double getMedianExtraSpace(vector<int> &nums1, vector<int> &nums2)
+{
     vector<int> vec;
-    int m, n, i , j;
+    int m, n, i, j;
     m = nums1.size();
     n = nums2.size();
     i = j = 0;
 
-    for (int k = 0; k < m+n && i < m && j < n; k++) {
-        if (nums1[i] < nums2[j]) {
+    for (int k = 0; k < m + n && i < m && j < n; k++)
+    {
+        if (nums1[i] < nums2[j])
+        {
             vec.push_back(nums1[i++]);
-        } else {
+        }
+        else
+        {
             vec.push_back(nums2[j++]);
         }
     }
-    if (i < m) {
-        for (;i < m; i++) {
+    if (i < m)
+    {
+        for (; i < m; i++)
+        {
             vec.push_back(nums1[i]);
         }
-    } else {
-        for (;j < n; j++) {
+    }
+    else
+    {
+        for (; j < n; j++)
+        {
             vec.push_back(nums2[j]);
         }
     }
     double rv = 0.0;
-    int index = vec.size()/2;
-    if (vec.size()%2 == 0) {
-        double sum = vec[index] + vec[index-1];
-        rv = sum/2;
-    } else {
+    int index = vec.size() / 2;
+    if (vec.size() % 2 == 0)
+    {
+        double sum = vec[index] + vec[index - 1];
+        rv = sum / 2;
+    }
+    else
+    {
         rv = vec[index];
     }
     return rv;
@@ -102,8 +114,8 @@ bool runMedianofTwoSortedArrays(void)
     int ar1[] = {1, 12, 15, 26, 38};
     int ar2[] = {2, 13, 17, 30, 45};
 
-    int n1 = sizeof(ar1)/sizeof(ar1[0]);
-    int n2 = sizeof(ar2)/sizeof(ar2[0]);
+    int n1 = sizeof(ar1) / sizeof(ar1[0]);
+    int n2 = sizeof(ar2) / sizeof(ar2[0]);
     if (n1 == n2)
         printf("Median is %d", getMedian(ar1, ar2, n1));
     else

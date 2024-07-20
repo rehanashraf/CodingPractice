@@ -31,16 +31,17 @@
 bool runStr();
 int strStr(std::string haystack, std::string needle);
 
-int strStr(std::string haystack, std::string needle) {
+int strStr(std::string haystack, std::string needle)
+{
     int rv = -1;
     size_t loopsize, lengthhaystack, lenghthneedle;
-    
+
     lenghthneedle = lengthhaystack = 0;
-    
+
     lengthhaystack = haystack.length();
     lenghthneedle = needle.length();
-    
-    if((!lengthhaystack && !lenghthneedle) || (!lenghthneedle))
+
+    if ((!lengthhaystack && !lenghthneedle) || (!lenghthneedle))
     {
         rv = 0;
         return rv;
@@ -52,42 +53,42 @@ int strStr(std::string haystack, std::string needle) {
         loopsize = 1;
     else
         return rv;
-    
+
     for (uint8_t i = 0; i <= loopsize; i++)
     {
         if (haystack[i] == needle[0])
         {
             rv = i;
-            for(int j = 1; j < lenghthneedle; j++)
+            for (int j = 1; j < lenghthneedle; j++)
             {
-                if (haystack[i+j] != needle[j])
+                if (haystack[i + j] != needle[j])
                 {
-                    rv = - 1;
-                    break;;
+                    rv = -1;
+                    break;
+                    ;
                 }
             }
             if (rv >= 0)
                 return rv;
         }
     }
-    
-    
+
     return rv;
 }
 
 bool runStr()
 {
     bool rv = true;
-    
+
     std::string hay, ned;
-    
+
     hay = "mississippi";
     ned = "pi";
-    std::cout << hay << " " << ned << " " << strStr(hay,ned) << std::endl;
-    
+    std::cout << hay << " " << ned << " " << strStr(hay, ned) << std::endl;
+
     hay = "hello";
     ned = "ll";
-    std::cout << hay << " " << ned << " " << strStr(hay,ned) << std::endl;
-    
+    std::cout << hay << " " << ned << " " << strStr(hay, ned) << std::endl;
+
     return rv;
 }

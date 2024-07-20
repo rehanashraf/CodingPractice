@@ -25,13 +25,14 @@
 
 #define SEARCH_INFO_NULL (-1) /* for empty slots */
 
-struct search_info {
+struct search_info
+{
     Graph graph;
-    int reached;        /* count of reached nodes */
-    int *preorder;      /* list of nodes in order first reached */
-    int *time;          /* time[i] == position of node i in preorder list */
-    int *parent;        /* parent in DFS or BFS forest */
-    int *depth;         /* distance from root */
+    int reached;   /* count of reached nodes */
+    int *preorder; /* list of nodes in order first reached */
+    int *time;     /* time[i] == position of node i in preorder list */
+    int *parent;   /* parent in DFS or BFS forest */
+    int *depth;    /* distance from root */
 };
 
 /* allocate and initialize search results structure */

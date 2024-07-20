@@ -20,20 +20,20 @@ struct stack
 
 typedef struct stack cstack_t;
 
-int stack_init(cstack_t *stack,int size);
+int stack_init(cstack_t *stack, int size);
 int stack_top(cstack_t *stack, char *ch);
 int stack_pop(cstack_t *stack, char *data, int bytes);
 int stack_push(cstack_t *stack, const char *data, int bytes);
 int stack_cleanup(cstack_t *stack);
 
-int stack_init(cstack_t *stack,int size)
+int stack_init(cstack_t *stack, int size)
 {
 	int rv = -1;
 	char *buf;
 	if (stack == NULL || size == 0)
 		return rv;
 
-	buf = (char *)malloc(sizeof(char)* size);
+	buf = (char *)malloc(sizeof(char) * size);
 	if (buf == NULL)
 		return rv;
 
@@ -66,7 +66,7 @@ int stack_top(cstack_t *stack, char *ch)
 	if (stack == NULL || ch == NULL || stack_isempty(stack))
 		return rv;
 
-	*ch = stack->buffer[stack->top-1];
+	*ch = stack->buffer[stack->top - 1];
 	rv = 0;
 
 	return rv;
@@ -94,7 +94,7 @@ int stack_cleanup(cstack_t *stack)
 	if (stack == NULL)
 		return rv;
 
-	for(int i = 0; i < stack->capacity; i++)
+	for (int i = 0; i < stack->capacity; i++)
 	{
 		stack->buffer[i] = 0;
 	}
@@ -131,21 +131,17 @@ bool runRehanStack(void)
 	char buf[10] = {0};
 	assert(stack_init(&st, 10) == 0);
 
+	assert(stack_push(&st, "abcdefg", 7) == 7);
+	assert(stack_top(&st, buf) == 0);
+	assert(stack_push(&st, "hijklmn", 7) == 3);
 
-    assert(stack_push(&st, "abcdefg", 7) == 7);
-    assert(stack_top(&st,buf) == 0);
-    assert(stack_push(&st, "hijklmn", 7) == 3);
+	assert(stack_pop(&st, buf, 6) == 6);
+	assert(strncmp(buf, "jihgfe", 6) == 0);
 
-    assert(stack_pop(&st, buf, 6) == 6);
-    assert(strncmp(buf, "jihgfe", 6) == 0);
+	assert(stack_push(&st, "klm", 3) == 3);
+	assert(stack_pop(&st, buf, 10) == 7);
 
-    assert(stack_push(&st, "klm", 3) == 3);
-    assert(stack_pop(&st, buf, 10) == 7);
+	assert(strncmp(buf, "mlkdcba", 7) == 0);
 
-    assert(strncmp(buf, "mlkdcba", 7) == 0);
-
-    return true;
+	return true;
 }
-
-
-

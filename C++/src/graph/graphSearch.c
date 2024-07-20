@@ -14,7 +14,8 @@ create_empty_array(int n)
     a = malloc(sizeof(*a) * n);
     assert(a);
 
-    for(i = 0; i < n; i++) {
+    for (i = 0; i < n; i++)
+    {
         a[i] = SEARCH_INFO_NULL;
     }
 
@@ -46,8 +47,7 @@ search_info_create(Graph g)
 }
 
 /* free search_info data---does NOT free graph pointer */
-void
-search_info_destroy(struct search_info *s)
+void search_info_destroy(struct search_info *s)
 {
     free(s->depth);
     free(s->parent);
@@ -57,13 +57,15 @@ search_info_destroy(struct search_info *s)
 }
 
 /* used inside search routines */
-struct edge {
-    int u;          /* source */
-    int v;          /* sink */
+struct edge
+{
+    int u; /* source */
+    int v; /* sink */
 };
 
 /* stack/queue */
-struct queue {
+struct queue
+{
     struct edge *e;
     int bottom;
     int top;
@@ -106,26 +108,34 @@ generic_search(struct search_info *r, int root, int use_queue)
     push_edge(r->graph, root, root, &q);
 
     /* while q.e not empty */
-    while(q.bottom < q.top) {
-        if(use_queue) {
+    while (q.bottom < q.top)
+    {
+        if (use_queue)
+        {
             cur = q.e[q.bottom++];
-        } else {
+        }
+        else
+        {
             cur = q.e[--q.top];
         }
 
         /* did we visit sink already? */
-        if(r->parent[cur.v] != SEARCH_INFO_NULL) continue;
+        if (r->parent[cur.v] != SEARCH_INFO_NULL)
+            continue;
 
         /* no */
         assert(r->reached < graph_vertex_count(r->graph));
         r->parent[cur.v] = cur.u;
         r->time[cur.v] = r->reached;
         r->preorder[r->reached++] = cur.v;
-        if(cur.u == cur.v) {
+        if (cur.u == cur.v)
+        {
             /* we could avoid this if we were certain SEARCH_INFO_NULL */
             /* would never be anything but -1 */
             r->depth[cur.v] = 0;
-        } else {
+        }
+        else
+        {
             r->depth[cur.v] = r->depth[cur.u] + 1;
         }
 
@@ -136,14 +146,12 @@ generic_search(struct search_info *r, int root, int use_queue)
     free(q.e);
 }
 
-void
-dfs(struct search_info *results, int root)
+void dfs(struct search_info *results, int root)
 {
     generic_search(results, root, 0);
 }
 
-void
-bfs(struct search_info *results, int root)
+void bfs(struct search_info *results, int root)
 {
     generic_search(results, root, 1);
 }

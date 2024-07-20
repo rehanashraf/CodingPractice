@@ -56,43 +56,43 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 int romanToInt(std::string s)
 {
     int total, current, previous;
-//    char ch;
-    
+    //    char ch;
+
     size_t stringSize = s.length();
     total = current = previous = 0;
-    
-    for(int i = 0; i < stringSize; i++)
+
+    for (int i = 0; i < stringSize; i++)
     {
         switch (s[i])
         {
-            case 'I':
-                current = 1;
-                break;
-            case 'V':
-                current = 5;
-                break;
-            case 'X':
-                current = 10;
-                break;
-            case 'L':
-                current = 50;
-                break;
-            case 'C':
-                current = 100;
-                break;
-            case 'D':
-                current = 500;
-                break;
-            case 'M':
-                current = 1000;
-                break;
-            default:
-                current = 0;
-                break;
+        case 'I':
+            current = 1;
+            break;
+        case 'V':
+            current = 5;
+            break;
+        case 'X':
+            current = 10;
+            break;
+        case 'L':
+            current = 50;
+            break;
+        case 'C':
+            current = 100;
+            break;
+        case 'D':
+            current = 500;
+            break;
+        case 'M':
+            current = 1000;
+            break;
+        default:
+            current = 0;
+            break;
         }
-        if(current > previous)
+        if (current > previous)
         {
-            total = total + current - 2*previous;
+            total = total + current - 2 * previous;
         }
         else
         {
@@ -106,21 +106,21 @@ int romanToInt(std::string s)
 bool runRomanToInt()
 {
     bool rv = true;
-    
+
     std::string input = "III";
     std::cout << input << " = " << romanToInt(input) << std::endl;
-    
+
     input = "IV";
     std::cout << input << " = " << romanToInt(input) << std::endl;
-    
+
     input = "IX";
     std::cout << input << " = " << romanToInt(input) << std::endl;
-    
+
     input = "LVIII";
     std::cout << input << " = " << romanToInt(input) << std::endl;
 
     input = "MCMXCIV";
     std::cout << input << " = " << romanToInt(input) << std::endl;
-    
+
     return rv;
 }

@@ -5,7 +5,7 @@
  *      Author: rehanashraf
  */
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 // Double For loops
@@ -13,16 +13,19 @@ void findMajority(int arr[], int n)
 {
     int maxCount = 0;
     int index = -1; // sentinels
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         int count = 0;
-        for (int j = 0; j < n; j++) {
+        for (int j = 0; j < n; j++)
+        {
             if (arr[i] == arr[j])
                 count++;
         }
 
         // update maxCount if count of
         // current element is greater
-        if (count > maxCount) {
+        if (count > maxCount)
+        {
             maxCount = count;
             index = i;
         }
@@ -42,12 +45,14 @@ int findCandidate(int a[], int size)
 {
     int maj_index = 0, count = 1;
     int i;
-    for (i = 1; i < size; i++) {
+    for (i = 1; i < size; i++)
+    {
         if (a[maj_index] == a[i])
             count++;
         else
             count--;
-        if (count == 0) {
+        if (count == 0)
+        {
             maj_index = i;
             count = 1;
         }
@@ -57,7 +62,7 @@ int findCandidate(int a[], int size)
 
 bool runFindMajority()
 {
-    int arr[] = { 1, 1, 2, 1, 3, 5, 1 };
+    int arr[] = {1, 1, 2, 1, 3, 5, 1};
     int n = sizeof(arr) / sizeof(arr[0]);
 
     // Function calling

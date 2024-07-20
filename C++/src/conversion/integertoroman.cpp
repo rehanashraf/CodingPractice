@@ -33,78 +33,78 @@
 bool runIntToRoman(void);
 std::string intToRoman(int num);
 
-std::string intToRoman(int num) {
+std::string intToRoman(int num)
+{
     std::string rv = "";
-    
+
     if (num < 1)
         return rv;
     else if (num > 3999)
         return rv;
-    
+
     while (num > 0)
     {
-        if (num/1000)
+        if (num / 1000)
         {
             num -= 1000;
             rv += 'M';
-
         }
-        else if (num/900)
+        else if (num / 900)
         {
             num -= 900;
             rv += 'C';
             rv += 'M';
         }
-        else if (num/500)
+        else if (num / 500)
         {
             num -= 500;
             rv += 'D';
         }
-        else if (num/400)
+        else if (num / 400)
         {
             num -= 400;
             rv += 'C';
             rv += 'D';
         }
-        else if (num/100)
+        else if (num / 100)
         {
             num -= 100;
             rv += 'C';
         }
-        else if (num/90)
+        else if (num / 90)
         {
             num -= 90;
             rv += 'X';
             rv += 'C';
         }
-        else if (num/50)
+        else if (num / 50)
         {
             num -= 50;
             rv += 'L';
         }
-        else if (num/40)
+        else if (num / 40)
         {
             num -= 40;
             rv += 'X';
             rv += 'L';
         }
-        else if (num/10)
+        else if (num / 10)
         {
             num -= 10;
             rv += 'X';
         }
-        else if (num/9)
+        else if (num / 9)
         {
             num -= 9;
             rv += 'I';
             rv += 'X';
         }
-        else if (num/5)
+        else if (num / 5)
         {
             num -= 5;
             rv += 'V';
         }
-        else if (num/4)
+        else if (num / 4)
         {
             num -= 4;
             rv += 'I';
@@ -123,7 +123,7 @@ bool runIntToRoman(void)
 {
     bool rv = true;
     int testvalue = 0;
-    
+
     testvalue = 1699;
     std::cout << testvalue << " in Roman is " << intToRoman(testvalue);
     return rv;

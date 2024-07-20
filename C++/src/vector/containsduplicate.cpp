@@ -28,38 +28,42 @@
 #include "print.h"
 
 bool runContainsDuplicate();
-bool containsDuplicate(std::vector<int>& nums);
+bool containsDuplicate(std::vector<int> &nums);
 
-bool runContainsDuplicate() {
+bool runContainsDuplicate()
+{
     bool rv = true;
-    std::vector<int> list1, list2,list3;
-    
-    list1 = {1,2,3,1};
-    list2 = {1,2,3,4};
-    list3 = {1,1,1,3,3,4,3,2,4,2};
-    
+    std::vector<int> list1, list2, list3;
+
+    list1 = {1, 2, 3, 1};
+    list2 = {1, 2, 3, 4};
+    list3 = {1, 1, 1, 3, 3, 4, 3, 2, 4, 2};
+
     printVector(list1);
-    std::cout << std::boolalpha << containsDuplicate(list1) << std::endl ;
-    
+    std::cout << std::boolalpha << containsDuplicate(list1) << std::endl;
+
     printVector(list2);
-    std::cout << containsDuplicate(list2) << std::endl ;
-    
+    std::cout << containsDuplicate(list2) << std::endl;
+
     printVector(list3);
-    std::cout << containsDuplicate(list3) << std::endl ;
-    
+    std::cout << containsDuplicate(list3) << std::endl;
+
     return rv;
 }
-bool containsDuplicate(std::vector<int>& nums) {
+bool containsDuplicate(std::vector<int> &nums)
+{
     size_t length = 0;
     bool rv = false;
     length = nums.size();
-    
+
     if (length == 0 || length == 1)
         return false;
-    
-    for (int i = 0; i < length - 1; i++) {
-        for(int j = i + 1; j < length; j++)
-            if (nums[i] == nums[j]) {
+
+    for (int i = 0; i < length - 1; i++)
+    {
+        for (int j = i + 1; j < length; j++)
+            if (nums[i] == nums[j])
+            {
                 rv = true;
                 return rv;
             }

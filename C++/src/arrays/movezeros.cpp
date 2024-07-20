@@ -13,32 +13,32 @@
 #include <vector>
 #include <algorithm>
 
-void moveZeroes(std::vector<int>& nums)
+void moveZeroes(std::vector<int> &nums)
 {
-   int leftmoveindex, lenghth;
-   leftmoveindex = lenghth = 0;
+    int leftmoveindex, lenghth;
+    leftmoveindex = lenghth = 0;
 
     lenghth = (int)nums.size();
-   for(size_t i = 0; i < lenghth; i++)
-   {
-       if (nums[i] != 0)
-       {
-           std::swap(nums[i], nums[leftmoveindex]);
-           leftmoveindex++;
-       }
-   }
+    for (size_t i = 0; i < lenghth; i++)
+    {
+        if (nums[i] != 0)
+        {
+            std::swap(nums[i], nums[leftmoveindex]);
+            leftmoveindex++;
+        }
+    }
 }
 
 bool runMoveZeroes(void)
 {
-	bool rv = false;
+    bool rv = false;
 
-	std::vector<int> list1,list2;
-    list1 = {0,1,0,3,12};
-    list2 = {0,1,0};
-    
-	moveZeroes(list1);
-	moveZeroes(list2);
-    
-	return rv;
+    std::vector<int> list1, list2;
+    list1 = {0, 1, 0, 3, 12};
+    list2 = {0, 1, 0};
+
+    moveZeroes(list1);
+    moveZeroes(list2);
+
+    return rv;
 }

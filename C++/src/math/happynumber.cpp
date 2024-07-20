@@ -29,11 +29,10 @@ bool runIsHappy(void);
 
 bool isHappy(int n)
 {
-	bool rv  = false;
+	bool rv = false;
 	std::vector<int> list;
 
-
-	while(!rv)
+	while (!rv)
 	{
 		n = getSquaredSum(n);
 		if (n == 1)
@@ -41,7 +40,7 @@ bool isHappy(int n)
 			rv = true;
 			return rv;
 		}
-		if(std::find(list.begin(), list.end(), n) != list.end())
+		if (std::find(list.begin(), list.end(), n) != list.end())
 		{
 			rv = false;
 			return rv;
@@ -54,10 +53,10 @@ bool isHappy(int n)
 int getSquaredSum(int number)
 {
 	int rv = 0;
-	while(number)
+	while (number)
 	{
-		rv = rv + pow(number % 10,2);
-		number = number/10;
+		rv = rv + pow(number % 10, 2);
+		number = number / 10;
 	}
 	return rv;
 }
@@ -65,9 +64,9 @@ int getSquaredSum(int number)
 bool runIsHappy(void)
 {
 	bool rv = true;
-	for(int i = 1; i < 100; i++)
+	for (int i = 1; i < 100; i++)
 	{
-		std::cout << i << " square is " << getSquaredSum(i) << " " << isHappy(i) <<std::endl;
+		std::cout << i << " square is " << getSquaredSum(i) << " " << isHappy(i) << std::endl;
 	}
 	return rv;
 }

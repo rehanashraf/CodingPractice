@@ -16,7 +16,7 @@ void my_memcpy(void *dest, void *src, size_t n)
     char *cdest = (char *)dest;
 
     // Copy contents of src[] to dest[]
-    for (int i=0; i<n; i++)
+    for (int i = 0; i < n; i++)
         cdest[i] = csrc[i];
 }
 
@@ -30,11 +30,11 @@ void my_memmove(void *dest, void *src, size_t n)
     char *temp = malloc(n * sizeof(char));
 
     // Copy data from csrc[] to temp[]
-    for (int i=0; i<n; i++)
+    for (int i = 0; i < n; i++)
         temp[i] = csrc[i];
 
     // Copy data from temp[] to cdest[]
-    for (int i=0; i<n; i++)
+    for (int i = 0; i < n; i++)
         cdest[i] = temp[i];
 
     free(temp);

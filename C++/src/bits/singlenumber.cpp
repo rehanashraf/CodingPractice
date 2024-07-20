@@ -19,16 +19,16 @@ Output: 4
 #include <iostream>
 using namespace std;
 
-int singleNumber(vector<int>& nums);
+int singleNumber(vector<int> &nums);
 bool runSingleNumber(void);
 
-int singleNumber(vector<int>& nums)
+int singleNumber(vector<int> &nums)
 {
-    int rv = 0;
-    size_t arraySize = 0;
+	int rv = 0;
+	size_t arraySize = 0;
 
 	arraySize = nums.size();
-	for(int i = 0; i < arraySize; i++)
+	for (int i = 0; i < arraySize; i++)
 	{
 		rv ^= nums[i];
 	}

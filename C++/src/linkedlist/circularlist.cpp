@@ -13,7 +13,7 @@ bool circularList(ListNode *head)
 	bool rv = false;
 	ListNode *slowptr, *fastptr;
 
-	if(head == NULL || head->next == NULL)
+	if (head == NULL || head->next == NULL)
 		return rv;
 
 	slowptr = fastptr = head;

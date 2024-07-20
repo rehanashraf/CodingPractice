@@ -11,21 +11,25 @@
 
 #define MAX_LEN 15
 
-typedef enum status {
+typedef enum status
+{
     STATUS_OK = 0,
     NULL_POINTER_PROVIDED = -1,
     BAD_PARAM = -2,
 } status_t;
 
 int compress_string(char *input_buf, uint32_t input_size, uint32_t *output_buf,
-        uint32_t output_len) {
+                    uint32_t output_len)
+{
     status_t rv = STATUS_OK;
 
-    if (input_buf == NULL || output_buf == NULL) {
+    if (input_buf == NULL || output_buf == NULL)
+    {
         rv = NULL_POINTER_PROVIDED;
         return rv;
     }
-    if (output_len == 0) {
+    if (output_len == 0)
+    {
         rv = BAD_PARAM;
         return rv;
     }
@@ -34,10 +38,14 @@ int compress_string(char *input_buf, uint32_t input_size, uint32_t *output_buf,
     uint32_t previous_count = 1;
     int index = 0;
 
-    for (int i = 1; i <= strlen(input_buf); i++) {
-        if (previous_char == input_buf[i]) {
+    for (int i = 1; i <= strlen(input_buf); i++)
+    {
+        if (previous_char == input_buf[i])
+        {
             previous_count++;
-        } else {
+        }
+        else
+        {
             output_buf[index++] = previous_char;
             output_buf[index++] = previous_count;
             previous_count = 1;
@@ -52,14 +60,17 @@ int compress_string(char *input_buf, uint32_t input_size, uint32_t *output_buf,
     return index;
 }
 
-static void reverse(char *start, char *end) {
+static void reverse(char *start, char *end)
+{
 
     char temp = '\0';
-    if (start == NULL || end == NULL) {
+    if (start == NULL || end == NULL)
+    {
         return;
     }
 
-    while(start <= end) {
+    while (start <= end)
+    {
         temp = *start;
         *start = *end;
         *end = temp;
@@ -68,15 +79,20 @@ static void reverse(char *start, char *end) {
     }
 }
 
-char* reverseWords(char *s) {
+char *reverseWords(char *s)
+{
     char *start = s;
     char *end = s;
 
-    while (*end) {
+    while (*end)
+    {
         end++;
-        if (*end == '\0') {
+        if (*end == '\0')
+        {
             reverse(start, end - 1);
-        } else if (*end == ' ') {
+        }
+        else if (*end == ' ')
+        {
             reverse(start, end - 1);
             start = end + 1;
         }
@@ -84,24 +100,30 @@ char* reverseWords(char *s) {
     return s;
 }
 
-void run_compression(void) {
+void run_compression(void)
+{
     char input[] = "aaaaagggdjfhhhooo";
-    uint32_t output[MAX_LEN] = { 0 };
+    uint32_t output[MAX_LEN] = {0};
 
     printf("%s\n", input);
     compress_string(input, strlen(input), output, MAX_LEN);
 
-    for (int i = 0; i < MAX_LEN; i++) {
-        if (i % 2 == 0) {
+    for (int i = 0; i < MAX_LEN; i++)
+    {
+        if (i % 2 == 0)
+        {
             printf("%c", output[i]);
-        } else {
+        }
+        else
+        {
             printf("%d", output[i]);
         }
     }
 
     printf("\n");
 
-    for (int i = 0; i < MAX_LEN; i++) {
+    for (int i = 0; i < MAX_LEN; i++)
+    {
         printf("0x%02X ", output[i]);
     }
 }

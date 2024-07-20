@@ -10,22 +10,22 @@
 ListNode *getKNodeFromEnd(ListNode *head, int n)
 {
     ListNode *rv, *temp;
-	int len = 0;
+    int len = 0;
     rv = temp = NULL;
 
-	temp = head;
-	/* Two pass */
-	while(temp != NULL)
-	{
-		temp = temp->next;
-		len++;
-	}
+    temp = head;
+    /* Two pass */
+    while (temp != NULL)
+    {
+        temp = temp->next;
+        len++;
+    }
 
-	temp = head;
-	for (int i = 0; i < len - n -1 ; i++)
-	{
-		temp = temp->next;
-	}
+    temp = head;
+    for (int i = 0; i < len - n - 1; i++)
+    {
+        temp = temp->next;
+    }
 
     temp->next = temp->next->next;
 
@@ -51,10 +51,10 @@ ListNode *getKNodeFromEnd(ListNode *head, int n)
     return head;
 #endif
 
-	return head;
+    return head;
 }
 
-void printNthFromLastRecursion(struct ListNode* head, int n)
+void printNthFromLastRecursion(struct ListNode *head, int n)
 {
     static int i = 0;
     if (head == NULL)
@@ -64,13 +64,14 @@ void printNthFromLastRecursion(struct ListNode* head, int n)
         printf("%d", head->val);
 }
 
-void printNthFromLast(struct ListNode* head, int n)
+void printNthFromLast(struct ListNode *head, int n)
 {
     int len = 0, i;
-    struct ListNode* temp = head;
+    struct ListNode *temp = head;
 
     // count the number of nodes in Linked List
-    while (temp != NULL) {
+    while (temp != NULL)
+    {
         temp = temp->next;
         len++;
     }

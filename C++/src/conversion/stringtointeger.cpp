@@ -6,7 +6,6 @@
 //  Copyright © 2019 Rehan Ashraf. All rights reserved.
 //
 
-
 /*
  Implement atoi which converts a string to an integer.
 
@@ -60,29 +59,29 @@ long int myAtoi(std::string str)
     long int liReturnVal = 0;
     size_t sizeofstring = str.length();
     bool bIsNegative = false, bAlreadySigned = false, bAlreadyFound = false;
-    
-    if(sizeofstring == 0)
+
+    if (sizeofstring == 0)
     {
         return 0;
     }
-    
-    for(int i = 0; i < sizeofstring; i++)
+
+    for (int i = 0; i < sizeofstring; i++)
     {
-        if(str[i] == ' ')
+        if (str[i] == ' ')
         {
-            if(bAlreadyFound || bAlreadySigned)
+            if (bAlreadyFound || bAlreadySigned)
             {
                 break;
             }
             continue;
         }
-        else if(str[i] == '-')
+        else if (str[i] == '-')
         {
-            if(bAlreadyFound)
+            if (bAlreadyFound)
             {
                 break;
             }
-            else if(bAlreadySigned)
+            else if (bAlreadySigned)
             {
                 liReturnVal = 0;
                 return liReturnVal;
@@ -91,13 +90,13 @@ long int myAtoi(std::string str)
             bIsNegative = true;
             bAlreadySigned = true;
         }
-        else if(str[i] == '+')
+        else if (str[i] == '+')
         {
-            if(bAlreadyFound)
+            if (bAlreadyFound)
             {
                 break;
             }
-            else if(bAlreadySigned)
+            else if (bAlreadySigned)
             {
                 liReturnVal = 0;
                 return liReturnVal;
@@ -111,10 +110,10 @@ long int myAtoi(std::string str)
             liReturnVal = liReturnVal * 10;
             liReturnVal = liReturnVal + (str[i] - 48);
             bAlreadyFound = true;
-            
-            if(liReturnVal > INT_MAX)
+
+            if (liReturnVal > INT_MAX)
             {
-                return bIsNegative? INT_MIN : INT_MAX;
+                return bIsNegative ? INT_MIN : INT_MAX;
             }
             //            power = power * 10;
         }
@@ -123,53 +122,53 @@ long int myAtoi(std::string str)
             break;
         }
     }
-    
-    if(bIsNegative)
+
+    if (bIsNegative)
     {
         liReturnVal = -1 * liReturnVal;
     }
-    
+
     return (int)liReturnVal;
 }
 
 bool runMyAtoi()
 {
     bool bReturbVal = true;
-    
+
     std::string str = "";
-    
+
     str = "42";
     std::cout << str << " " << myAtoi(str) << std::endl;
-    
+
     str = "   -42";
     std::cout << str << " " << myAtoi(str) << std::endl;
-    
+
     str = "   -4152";
     std::cout << str << " " << myAtoi(str) << std::endl;
-    
+
     str = "410093 with words";
     std::cout << str << " " << myAtoi(str) << std::endl;
-    
+
     str = "words and 987";
     std::cout << str << " " << myAtoi(str) << std::endl;
-    
+
     str = "-91283472332";
     std::cout << str << " " << myAtoi(str) << std::endl;
-    
+
     str = "2147483648";
     std::cout << str << " " << myAtoi(str) << std::endl;
-    
+
     str = "-2147483648";
     std::cout << str << " " << myAtoi(str) << std::endl;
-    
+
     str = "2147483647";
     std::cout << str << " " << myAtoi(str) << std::endl;
-    
+
     str = "20000000000000000000";
     std::cout << str << " " << myAtoi(str) << std::endl;
-    
+
     str = "-200-";
     std::cout << str << " " << myAtoi(str) << std::endl;
-    
+
     return bReturbVal;
 }

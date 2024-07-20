@@ -49,21 +49,20 @@ bool isValid(std::string s)
 {
     bool rv = false;
     size_t stringLen = 0;
-    
+
     char current, previous;
-    
+
     current = previous = '\0';
-    
+
     stringLen = s.size();
     std::stack<char> teststack;
-    
-    for(int i = 0; i < stringLen; i++)
+
+    for (int i = 0; i < stringLen; i++)
     {
-        if((s[i] == ')') || (s[i] == ']') || (s[i] == '}'))
+        if ((s[i] == ')') || (s[i] == ']') || (s[i] == '}'))
         {
-            if(!teststack.empty())
+            if (!teststack.empty())
             {
-                
             }
             else
             {
@@ -72,14 +71,13 @@ bool isValid(std::string s)
             }
         }
     }
-    
+
     return rv;
 }
 
 bool runIsValid()
 {
     bool rv = true;
-    
-    
+
     return rv;
 }

@@ -13,45 +13,47 @@ using namespace std;
 void runIsSameTree(void);
 typedef struct TreeNode tnode;
 
-bool isSameTree(TreeNode* p, TreeNode* q) {
-	bool rv , lrv, rrv;
-	rv = lrv = rrv = false;
+bool isSameTree(TreeNode *p, TreeNode *q)
+{
+    bool rv, lrv, rrv;
+    rv = lrv = rrv = false;
 
-	TreeNode *pleft, *pright, *qleft, *qright;
-	pleft = pright = qleft = qright = nullptr;
+    TreeNode *pleft, *pright, *qleft, *qright;
+    pleft = pright = qleft = qright = nullptr;
 
-	if (p == nullptr && q == nullptr)
-		return true;
-	else if ((p == nullptr && q != nullptr) || (p != nullptr && q == nullptr))
-		return false;
+    if (p == nullptr && q == nullptr)
+        return true;
+    else if ((p == nullptr && q != nullptr) || (p != nullptr && q == nullptr))
+        return false;
 
-	if (p->val == q->val)
-		rv = true;
-	else
-		rv = false;
-	lrv = isSameTree(p->left, q->left);
-	rrv = isSameTree(p->right, q->right);
+    if (p->val == q->val)
+        rv = true;
+    else
+        rv = false;
+    lrv = isSameTree(p->left, q->left);
+    rrv = isSameTree(p->right, q->right);
 
     return rv && lrv && rrv;
 }
 
-int maxDepth(TreeNode* root) {
-	int ldepth, rdepth;
-	ldepth = rdepth = 1;
+int maxDepth(TreeNode *root)
+{
+    int ldepth, rdepth;
+    ldepth = rdepth = 1;
 
-	if (root == nullptr)
-		return 0;
+    if (root == nullptr)
+        return 0;
 
-	ldepth = ldepth + maxDepth(root->left);
-	rdepth = rdepth + maxDepth(root->right);
+    ldepth = ldepth + maxDepth(root->left);
+    rdepth = rdepth + maxDepth(root->right);
 
-	return MAX(ldepth, rdepth);
+    return MAX(ldepth, rdepth);
 }
 
-bool isBSTUtil(tnode* node, int min, int max)
+bool isBSTUtil(tnode *node, int min, int max)
 {
     /* an empty tree is BST */
-    if (node==NULL)
+    if (node == NULL)
         return 1;
 
     /* false if this node violates
@@ -61,18 +63,17 @@ bool isBSTUtil(tnode* node, int min, int max)
 
     /* otherwise check the subtrees recursively,
     tightening the min or max constraint */
-    return
-        isBSTUtil(node->left, min, node->val-1) && // Allow only distinct values
-        isBSTUtil(node->right, node->val+1, max); // Allow only distinct values
+    return isBSTUtil(node->left, min, node->val - 1) && // Allow only distinct values
+           isBSTUtil(node->right, node->val + 1, max);  // Allow only distinct values
 }
 
 bool isBSTValid(tnode *root)
 {
-    return(isBSTUtil(root, INT_MIN, INT_MAX));
+    return (isBSTUtil(root, INT_MIN, INT_MAX));
 }
 /*
-	  1
-	/   \
+      1
+    /   \
    2     3
   / \   / \
  4   5 6   7
@@ -98,8 +99,7 @@ else if level greater than 1, then
     printGivenLevel(tree->right, level-1);
 */
 
-
-void printGivenLevel( tnode* root, int level)
+void printGivenLevel(tnode *root, int level)
 {
     if (root == NULL)
         return;
@@ -107,28 +107,28 @@ void printGivenLevel( tnode* root, int level)
         printf("%d ", root->val);
     else if (level > 1)
     {
-    	/* Check if you want to print right to left or left to right */
-        printGivenLevel(root->left, level-1);
-        printGivenLevel(root->right, level-1);
+        /* Check if you want to print right to left or left to right */
+        printGivenLevel(root->left, level - 1);
+        printGivenLevel(root->right, level - 1);
     }
 }
 
-int height( tnode* node)
+int height(tnode *node)
 {
-	int rv = 0;
-	int lheight = 1, rheight = 1;
+    int rv = 0;
+    int lheight = 1, rheight = 1;
 
-	if (node == NULL)
-		return rv;
+    if (node == NULL)
+        return rv;
 
-	lheight = lheight + height(node->left);
-	rheight = rheight + height(node->right);
+    lheight = lheight + height(node->left);
+    rheight = rheight + height(node->right);
 
-	rv = MAX(rheight, lheight);
-	return rv;
+    rv = MAX(rheight, lheight);
+    return rv;
 }
 
-void printLevelOrder(tnode* root)
+void printLevelOrder(tnode *root)
 {
     int h = height(root);
     int i;
@@ -137,8 +137,8 @@ void printLevelOrder(tnode* root)
 }
 
 /*
-	  1
-	/   \
+      1
+    /   \
    2     3
   / \   / \
  4   5 6   7
@@ -151,7 +151,7 @@ void printLevelOrder(tnode* root)
 
 /* Given a binary tree, print its nodes according to the
 "bottom-up" postorder traversal. */
-void printPostorder(tnode* node)
+void printPostorder(tnode *node)
 {
     if (node == NULL)
         return;
@@ -167,7 +167,7 @@ void printPostorder(tnode* node)
 }
 
 /* Given a binary tree, print its nodes in inorder*/
-void printInorder( tnode* node)
+void printInorder(tnode *node)
 {
     if (node == NULL)
         return;
@@ -183,7 +183,7 @@ void printInorder( tnode* node)
 }
 
 /* Given a binary tree, print its nodes in preorder*/
-void printPreorder( tnode* node)
+void printPreorder(tnode *node)
 {
     if (node == NULL)
         return;
@@ -202,29 +202,25 @@ void printPreorder( tnode* node)
 
 void printNode(tnode *head, int level, int heigthToPrint)
 {
-	int right, left;
-	right = left = 0;
-	if(head == NULL)
-		return;
-	printNode(head->right, level+ 1,heigthToPrint);
-	printNode(head->left,level+ 1, heigthToPrint);
+    int right, left;
+    right = left = 0;
+    if (head == NULL)
+        return;
+    printNode(head->right, level + 1, heigthToPrint);
+    printNode(head->left, level + 1, heigthToPrint);
 
-	if (level == heigthToPrint)
-	{
-		printf("%d %d ", right, left);
-	}
-
+    if (level == heigthToPrint)
+    {
+        printf("%d %d ", right, left);
+    }
 }
 
 void printTreeNodes(tnode *root)
 {
-	int theight = 0;
-	theight = maxDepth(root);
-	for (int i = theight; i > 0; i--)
-	{
-		printNode(root, i, theight);
-	}
+    int theight = 0;
+    theight = maxDepth(root);
+    for (int i = theight; i > 0; i--)
+    {
+        printNode(root, i, theight);
+    }
 }
-
-
-

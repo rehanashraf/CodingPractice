@@ -5,14 +5,14 @@
  *      Author: rehanashraf
  */
 
-#include<stdio.h>
+#include <stdio.h>
 typedef int xSemaphoreHandle;
-int xSemaphoreCreateMutex(){return 0;}
-void vSemaphoreCreateBinary(xSemaphoreHandle n){return;}
-void vTaskDelay(int n){return;}
-void xSemaphoreGive(xSemaphoreHandle n){}
-int xSemaphoreTake(xSemaphoreHandle n, int m){return 1;}
-void taskYIELD(){};
+int xSemaphoreCreateMutex() { return 0; }
+void vSemaphoreCreateBinary(xSemaphoreHandle n) { return; }
+void vTaskDelay(int n) { return; }
+void xSemaphoreGive(xSemaphoreHandle n) {}
+int xSemaphoreTake(xSemaphoreHandle n, int m) { return 1; }
+void taskYIELD() {};
 #define portMAX_DELAY 10000000
 
 xSemaphoreHandle gatekeeper = 0;
@@ -29,11 +29,9 @@ int freertosmain(void)
 
 void access_precious_resource()
 {
-
 }
 void employee_task()
 {
-
 }
 
 // Mutex Example
@@ -76,7 +74,7 @@ void user_2(void *p)
 // Sempahore Example
 void boos(void *p)
 {
-	while(1)
+	while (1)
 	{
 		xSemaphoreGive(employee_signal);
 		vTaskDelay(2000);
@@ -85,7 +83,7 @@ void boos(void *p)
 
 void employee(void *p)
 {
-	while(1)
+	while (1)
 	{
 		if (xSemaphoreTake(employee_signal, portMAX_DELAY))
 			employee_task();
@@ -93,35 +91,36 @@ void employee(void *p)
 	}
 }
 
-
 static void write_task_1(void *pvParameters);
 static void write_task_2(void *pvParameters);
 
 /*!
  * @brief Write Task 1 function
  */
-static void write_task_1(void *pvParameters) {
-	while (1) {
+static void write_task_1(void *pvParameters)
+{
+	while (1)
+	{
 		xSemaphoreTake(xMutex, portMAX_DELAY);
 		printf("Hello, this is the ");
 		taskYIELD();
 		printf("first task \r\n");
-		xSemaphoreGive (xMutex);
+		xSemaphoreGive(xMutex);
 		taskYIELD();
 	}
 }
 /*!
  * @brief Write Task 2 function
  */
-static void write_task_2(void *pvParameters) {
-	while (1) {
+static void write_task_2(void *pvParameters)
+{
+	while (1)
+	{
 		xSemaphoreTake(xMutex, portMAX_DELAY);
 		printf("And now this is the ");
 		taskYIELD();
 		printf(" second task\r\n");
-		xSemaphoreGive (xMutex);
+		xSemaphoreGive(xMutex);
 		taskYIELD();
 	}
 }
-
-

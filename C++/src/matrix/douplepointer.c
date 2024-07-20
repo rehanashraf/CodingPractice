@@ -5,17 +5,15 @@
  *      Author: rehanashraf
  */
 
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 #define ROWS 5
 #define COLS 5
 
 void usingCPlusPlus(void)
 {
-
 }
-
 
 void usingC(void)
 {
@@ -25,11 +23,11 @@ void usingC(void)
 	/* Using a single pointer */
 	int *spointer = (int *)malloc(rows * cols * sizeof(int));
 
-	for(int i = 0; i < rows; i++)
+	for (int i = 0; i < rows; i++)
 	{
-		for(int j = 0; j < cols; j++)
+		for (int j = 0; j < cols; j++)
 		{
-			*(spointer + i*rows + j) = count;
+			*(spointer + i * rows + j) = count;
 			count++;
 		}
 	}
@@ -39,7 +37,7 @@ void usingC(void)
 	{
 		for (int j = 0; j < cols; j++)
 		{
-			printf("%02i ", *(spointer + i*rows + j));
+			printf("%02i ", *(spointer + i * rows + j));
 		}
 		printf("\n");
 	}
@@ -97,12 +95,12 @@ void usingC(void)
 	}
 
 	/* Using Double pointer as well as one malloc call */
-	int **donepointer = (int **)malloc(rows * (sizeof(int*)) + rows*cols*(sizeof(int)));
+	int **donepointer = (int **)malloc(rows * (sizeof(int *)) + rows * cols * (sizeof(int)));
 	int *ptr = (int *)(donepointer + rows);
 
 	for (int i = 0; i < rows; i++)
 	{
-		donepointer[i] = ptr + cols*i;
+		donepointer[i] = ptr + cols * i;
 	}
 
 	for (int i = 0; i < rows; i++)
@@ -118,9 +116,8 @@ void usingC(void)
 	{
 		for (int j = 0; j < cols; j++)
 		{
-			printf("%d ",donepointer[i][j]);
+			printf("%d ", donepointer[i][j]);
 		}
 		printf("\n");
 	}
-
 }

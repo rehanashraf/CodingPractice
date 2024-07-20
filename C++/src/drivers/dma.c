@@ -5,13 +5,12 @@
  *      Author: rehanashraf
  */
 
-
-
 /* Hardware base address of register set */
 #define DEVICE_BASE_ADDRESS 0x7f004000
 
 /* Structure representing DMA device register set */
-typedef struct {
+typedef struct
+{
     unsigned long cmd;
     unsigned long status;
     unsigned long source_address;
@@ -28,9 +27,10 @@ typedef struct {
      count         byte count of data to move
 
 */
-void do_dma(unsigned long source, unsigned long dest, int count) {
+void do_dma(unsigned long source, unsigned long dest, int count)
+{
 
-    dma_dev_regs_t *pRegs = DEVICE_BASE_ADDRESS;
+    dma_dev_regs_t *pRegs = (dma_dev_regs_t *)DEVICE_BASE_ADDRESS;
 
     pRegs->status = 0;
 
@@ -40,5 +40,7 @@ void do_dma(unsigned long source, unsigned long dest, int count) {
 
     pRegs->cmd = 1;
 
-    while ( pRegs->status == 0 ) {}
+    while (pRegs->status == 0)
+    {
+    }
 }

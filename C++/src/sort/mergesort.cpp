@@ -5,7 +5,6 @@
  *      Author: rehanashraf
  */
 
-
 /* C program for Merge Sort */
 #include <stdio.h>
 #include <stdlib.h>
@@ -33,12 +32,15 @@ void merge(int arr[], int l, int m, int r)
     i = 0; // Initial index of first subarray
     j = 0; // Initial index of second subarray
     k = l; // Initial index of merged subarray
-    while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
+    while (i < n1 && j < n2)
+    {
+        if (L[i] <= R[j])
+        {
             arr[k] = L[i];
             i++;
         }
-        else {
+        else
+        {
             arr[k] = R[j];
             j++;
         }
@@ -47,7 +49,8 @@ void merge(int arr[], int l, int m, int r)
 
     /* Copy the remaining elements of L[], if there
     are any */
-    while (i < n1) {
+    while (i < n1)
+    {
         arr[k] = L[i];
         i++;
         k++;
@@ -55,7 +58,8 @@ void merge(int arr[], int l, int m, int r)
 
     /* Copy the remaining elements of R[], if there
     are any */
-    while (j < n2) {
+    while (j < n2)
+    {
         arr[k] = R[j];
         j++;
         k++;
@@ -66,7 +70,8 @@ void merge(int arr[], int l, int m, int r)
 sub-array of arr to be sorted */
 void mergeSort(int arr[], int l, int r)
 {
-    if (l < r) {
+    if (l < r)
+    {
         // Same as (l+r)/2, but avoids overflow for
         // large l and h
         int m = l + (r - l) / 2;
@@ -82,7 +87,7 @@ void mergeSort(int arr[], int l, int r)
 /* Driver program to test above functions */
 int runMergeSort()
 {
-    int arr[] = { 12, 11, 13, 5, 6, 7 };
+    int arr[] = {12, 11, 13, 5, 6, 7};
     int arr_size = sizeof(arr) / sizeof(arr[0]);
 
     printf("Given array is \n");

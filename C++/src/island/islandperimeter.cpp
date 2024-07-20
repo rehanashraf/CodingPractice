@@ -13,28 +13,30 @@
 #include "print.h"
 
 bool runIslandPerimeter();
-int islandPerimeter(std::vector<std::vector<int>>& grid);
-//std::vector<std::vector<int>> getAdjacent(int row, int col, int maxRow, int maxCol);
+int islandPerimeter(std::vector<std::vector<int>> &grid);
+// std::vector<std::vector<int>> getAdjacent(int row, int col, int maxRow, int maxCol);
 std::vector<std::pair<int, int>> getAdjacent(int row, int col, int maxRow, int maxCol);
 
-bool runIslandPerimeter() {
+bool runIslandPerimeter()
+{
     bool rv = true;
-    
+
     std::vector<std::pair<int, int>> listofpairs = getAdjacent(2, 0, 3, 3);
     printPairs(listofpairs);
-    std::vector<std::vector<int>> grid = {{0,1,0,0}, {1,1,1,0}, {0,1,0,0}, {1,1,0,0}};
-    
-//    std::cout << islandPerimeter(grid);
-    
+    std::vector<std::vector<int>> grid = {{0, 1, 0, 0}, {1, 1, 1, 0}, {0, 1, 0, 0}, {1, 1, 0, 0}};
+
+    //    std::cout << islandPerimeter(grid);
+
     return rv;
 }
 
-std::vector<std::pair<int, int>> getAdjacent(int row, int col, int maxRow, int maxCol) {
+std::vector<std::pair<int, int>> getAdjacent(int row, int col, int maxRow, int maxCol)
+{
     std::vector<std::pair<int, int>> rv;
-  
+
     if (row >= maxRow || col >= maxCol)
         return rv;
-    
+
     for (int dx = (row > 0 ? -1 : 0); dx <= (row <= maxRow ? 1 : 0); ++dx)
     {
         for (int dy = (col > 0 ? -1 : 0); dy <= (col <= maxCol ? 1 : 0); ++dy)
@@ -53,25 +55,29 @@ std::vector<std::pair<int, int>> getAdjacent(int row, int col, int maxRow, int m
     return rv;
 }
 
-int islandPerimeter(std::vector<std::vector<int>>& grid) {
+int islandPerimeter(std::vector<std::vector<int>> &grid)
+{
     int rv, withLand, maxRows, maxCols;
     std::vector<std::pair<int, int>> adjacentBlocks;
-    
+
     rv = maxRows = maxCols = withLand = 0;
     maxRows = grid.size();
-    
-    for (int i = 0; i < maxRows; i++) {
+
+    for (int i = 0; i < maxRows; i++)
+    {
         maxCols = grid[i].size();
-        for (int j = 0; j < maxCols; j++) {
+        for (int j = 0; j < maxCols; j++)
+        {
             withLand = 0;
             adjacentBlocks = getAdjacent(i, j, maxRows, maxCols);
-            for (int k =0; k < adjacentBlocks.size(); k++) {
-                if(grid[adjacentBlocks[k].first][adjacentBlocks[k].second] == 1)
+            for (int k = 0; k < adjacentBlocks.size(); k++)
+            {
+                if (grid[adjacentBlocks[k].first][adjacentBlocks[k].second] == 1)
                     withLand++;
             }
             rv += 4 - withLand;
         }
     }
-    
+
     return rv;
 }

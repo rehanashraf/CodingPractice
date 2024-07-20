@@ -33,19 +33,20 @@
 bool runHammingDistance();
 int hammingDistance(int x, int y);
 
-int hammingDistance(int x, int y) {
+int hammingDistance(int x, int y)
+{
     int rv, xorValue, mask;
     rv = xorValue = 0;
     mask = 1;
     xorValue = x ^ y;
-    
-    for(int i = 0; i < 32; i++)
+
+    for (int i = 0; i < 32; i++)
     {
-        if(mask & xorValue)
+        if (mask & xorValue)
             rv++;
         mask = mask << 1;
     }
-    
+
     return rv;
 }
 

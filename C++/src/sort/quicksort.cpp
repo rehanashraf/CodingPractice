@@ -17,16 +17,15 @@ using namespace std;
  ******************************************************************************************/
 /* C++ implementation of QuickSort */
 
-
 /* This function takes last element as pivot, places
 the pivot element at its correct position in sorted
 array, and places all smaller (smaller than pivot)
 to left of pivot and all greater elements to right
 of pivot */
-int partition (int arr[], int low, int high)
+int partition(int arr[], int low, int high)
 {
     int pivot = arr[high]; // pivot
-    int i = (low - 1); // Index of smaller element
+    int i = (low - 1);     // Index of smaller element
 
     for (int j = low; j <= high - 1; j++)
     {

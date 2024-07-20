@@ -41,8 +41,8 @@ int lengthOfLongestSubstring(std::string s)
     std::size_t s_len = s.length();
     std::size_t pos = -1;
     char comparecharacter;
-        
-    if(s_len == 0)
+
+    if (s_len == 0)
     {
         rv = 0;
         return rv;
@@ -52,17 +52,17 @@ int lengthOfLongestSubstring(std::string s)
         longestsrting += s[0];
         currentlongeststring += s[0];
     }
-    for(int i = 1; i < s_len; i++)
+    for (int i = 1; i < s_len; i++)
     {
         comparecharacter = s[i];
         pos = currentlongeststring.find(comparecharacter);
-        if(pos!=std::string::npos)
+        if (pos != std::string::npos)
         {
-            if(currentlongeststring.size() > longestsrting.size())
+            if (currentlongeststring.size() > longestsrting.size())
             {
                 longestsrting = currentlongeststring;
             }
-            currentlongeststring = currentlongeststring.substr(pos+1);
+            currentlongeststring = currentlongeststring.substr(pos + 1);
             currentlongeststring += comparecharacter;
         }
         else
@@ -70,11 +70,11 @@ int lengthOfLongestSubstring(std::string s)
             currentlongeststring += s[i];
         }
     }
-    if(currentlongeststring.size() > longestsrting.size())
+    if (currentlongeststring.size() > longestsrting.size())
     {
         longestsrting = currentlongeststring;
     }
-//    std::cout << "Substring is " << longestsrting << std:: endl;
+    //    std::cout << "Substring is " << longestsrting << std:: endl;
     rv = (int)longestsrting.size();
     return rv;
 }
@@ -83,7 +83,7 @@ bool runlengthOfLongestSubstring()
 {
     std::string testdata = "";
     int result = 0;
-    
+
     testdata = "abcabcbb";
     result = lengthOfLongestSubstring(testdata);
     std::cout << testdata << " " << result << std::endl;
@@ -103,7 +103,7 @@ bool runlengthOfLongestSubstring()
     testdata = "dvdf";
     result = lengthOfLongestSubstring(testdata);
     std::cout << testdata << " " << result << std::endl;
-    
+
     testdata = "aabaab!bb";
     result = lengthOfLongestSubstring(testdata);
     std::cout << testdata << " " << result << std::endl;

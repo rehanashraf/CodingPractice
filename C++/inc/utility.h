@@ -8,7 +8,8 @@
 #ifndef UTILITY_H_
 #define UTILITY_H_
 
-typedef enum errors{
+typedef enum errors
+{
     ERROR_OK = 0,
     ERROR_GENERIC = -1,
     ERROR_NULL_POINTER = -2,
@@ -16,7 +17,7 @@ typedef enum errors{
     ERROR_OUT_OF_BOUNDS = -4,
     ERROR_WRONG_SIZE = -5,
     ERROR_BAD_PARAMETER = -6,
-}errors_e;
+} errors_e;
 
 inline void swap(int *a, int *b)
 {
@@ -25,12 +26,11 @@ inline void swap(int *a, int *b)
     *b = t;
 }
 
-//inline void swap(int a, int b) {
+// inline void swap(int a, int b) {
 //	int temp;
 //	temp = a;
 //	a = b;
 //	b = temp;
-//}
-
+// }
 
 #endif /* UTILITY_H_ */

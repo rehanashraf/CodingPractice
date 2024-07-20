@@ -43,26 +43,26 @@
 bool runArrangeCoins();
 int arrangeCoins(int n);
 
-int arrangeCoins(int n) {
+int arrangeCoins(int n)
+{
     int rv;
     long double forsqrt;
-    
+
     forsqrt = ((long double)8 * (long double)n) + 1;
-    
-    rv = ((-1 + sqrt(forsqrt))/2);
-    
+
+    rv = ((-1 + sqrt(forsqrt)) / 2);
+
     return rv;
 }
 
 bool runArrangeCoins()
 {
     bool rv = true;
-    
+
     std::cout << arrangeCoins(1) << std::endl;
     std::cout << arrangeCoins(2) << std::endl;
     std::cout << arrangeCoins(3) << std::endl;
     std::cout << arrangeCoins(1804289383) << std::endl;
-    
-    
+
     return rv;
 }

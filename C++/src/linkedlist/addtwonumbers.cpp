@@ -22,16 +22,16 @@
 
 #include "print.h"
 
-ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
+ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
 {
     ListNode *head, *iterator = nullptr;
     int sum = 0;
     head = iterator = new ListNode(-1);
-    
-    while((l1 != nullptr) || (l2 !=nullptr) || (sum))
+
+    while ((l1 != nullptr) || (l2 != nullptr) || (sum))
     {
 
-        if(l1)
+        if (l1)
         {
             sum += l1->val;
             l1 = l1->next;
@@ -41,8 +41,8 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
             sum += l2->val;
             l2 = l2->next;
         }
-        
-        if(sum > 9)
+
+        if (sum > 9)
         {
             iterator->next = new ListNode(sum - 10);
             sum = 1;
@@ -53,9 +53,8 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
             sum = 0;
         }
         iterator = iterator->next;
-
     }
-    
+
     return head->next;
 }
 
@@ -64,17 +63,17 @@ bool runAddTwoNumbers()
     ListNode *list1, *list2, *iterator1, *iterator2 = nullptr;
     list1 = iterator1 = new ListNode(1);
     list2 = iterator2 = new ListNode(2);
-    
-    for(int i = 1; i < 3; i++)
+
+    for (int i = 1; i < 3; i++)
     {
-        iterator1->next = new ListNode(i*2);
-        iterator2->next = new ListNode(i*3);
-        
+        iterator1->next = new ListNode(i * 2);
+        iterator2->next = new ListNode(i * 3);
+
         iterator1 = iterator1->next;
         iterator2 = iterator2->next;
     }
     iterator1 = iterator2 = nullptr;
-    
+
     ListNode *rv = nullptr;
     printList(list1);
     printList(list2);
@@ -82,5 +81,3 @@ bool runAddTwoNumbers()
     printList(rv);
     return true;
 }
-
-

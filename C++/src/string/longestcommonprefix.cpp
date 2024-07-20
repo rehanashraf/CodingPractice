@@ -25,7 +25,6 @@
  All given inputs are in lowercase letters a-z.
  */
 
-
 #include <stdio.h>
 #include <iostream>
 #include <string>
@@ -33,35 +32,35 @@
 
 #include "print.h"
 
-std::string longestCommonPrefix(std::vector<std::string>& strs);
+std::string longestCommonPrefix(std::vector<std::string> &strs);
 bool runLongestCommonPrefix();
 
-std::string longestCommonPrefix(std::vector<std::string>& strs)
+std::string longestCommonPrefix(std::vector<std::string> &strs)
 {
     std::string rv;
     size_t listSize = 0, stringSize = 0, rvSize = 0;
     bool keepRunning = true;
     char checkChar = '\0';
-    
+
     listSize = strs.size();
     rv = "";
-    
-    if(listSize == 0)
+
+    if (listSize == 0)
     {
         return rv;
     }
-    
-    while(keepRunning)
+
+    while (keepRunning)
     {
-        for(int i = 0 ; i < listSize; i++)
+        for (int i = 0; i < listSize; i++)
         {
             stringSize = strs[i].length();
-            if(stringSize == 0)
+            if (stringSize == 0)
             {
                 rv = "";
                 return rv;
             }
-            if(i == 0)
+            if (i == 0)
             {
                 checkChar = strs[i][rvSize];
                 rvSize++;
@@ -71,7 +70,7 @@ std::string longestCommonPrefix(std::vector<std::string>& strs)
 
                 if (rvSize <= stringSize)
                 {
-                    if(strs[i][rvSize - 1] == checkChar)
+                    if (strs[i][rvSize - 1] == checkChar)
                     {
                         continue;
                     }
@@ -84,21 +83,20 @@ std::string longestCommonPrefix(std::vector<std::string>& strs)
                 {
                     return rv;
                 }
-
             }
         }
         rv = rv + checkChar;
     }
-    
+
     return rv;
 }
 
 bool runLongestCommonPrefix()
 {
     bool rv = true;
-    
-    std::vector<std::string> input = {"flower","flow","flowight"};
-    
+
+    std::vector<std::string> input = {"flower", "flow", "flowight"};
+
     printVector(input);
     std::cout << longestCommonPrefix(input) << std::endl;
     return rv;

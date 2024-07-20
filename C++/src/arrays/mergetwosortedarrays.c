@@ -7,7 +7,8 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-uint32_t ArrayMerge(uint32_t Asize, uint32_t *A, uint32_t Bsize, uint32_t *B, uint32_t *C) {
+uint32_t ArrayMerge(uint32_t Asize, uint32_t *A, uint32_t Bsize, uint32_t *B, uint32_t *C)
+{
 
 	if (C == NULL)
 	{
@@ -123,4 +124,3 @@ uint32_t ArrayMerge(uint32_t Asize, uint32_t *A, uint32_t Bsize, uint32_t *B, ui
 
 	return c_pointer;
 }
-
