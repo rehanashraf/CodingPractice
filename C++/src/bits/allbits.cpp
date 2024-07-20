@@ -252,3 +252,18 @@ uint32_t changeEndiness(uint32_t num) {
 
     return res;
 }
+
+uint32_t getGreyCode(uint32_t number)
+{
+    uint32_t rv = 0;
+    rv = number ^ (number >> 1);
+    return rv;
+}
+
+uint32_t getReverseGreyCode(uint32_t number)
+{
+    uint32_t rv = 0;
+    for (; number; number >>= 1)
+        rv ^= number;
+    return rv;
+}

@@ -62,13 +62,8 @@ $(BIN): $(COBJS) $(CPPOBJS)
 	$(AT) echo "Done Building $@"
 
 dump:
-<<<<<<< HEAD
-	$(AT) echo "C source \n$(subst $(space),$(newline),$(CSOURCE))\n"
-	$(AT) echo "C objs \n$(subst $(space),$(newline),$(COBJS))\n"
-=======
 	$(AT) echo "C source $(newline)$(subst $(space),$(newline),$(CSOURCE))$(newline)"
 	$(AT) echo "C objs $(newline)$(subst $(space),$(newline),$(COBJS))$(newline)"
->>>>>>> ef580dd (Created makefile to build c and C++ code locally without any IDE)
 
 .PHONY: clean dump
 clean:
