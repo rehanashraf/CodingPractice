@@ -56,7 +56,7 @@ int main(int argc, const char *argv[])
     printf("\n\n\n");
     for (int i = 0; i < outputLength; i++)
     {
-        printf("%s\n", output[i]);
+        printf("%c\n", output[i]);
     }
     //    for(int mask = 0; mask < (1 << length); mask++) {
     //        string temp = "";

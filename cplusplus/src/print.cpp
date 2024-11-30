@@ -7,6 +7,7 @@
 //
 
 #include "print.h"
+#include "utility.h"
 
 void printVector(std::vector<int> &list)
 {
@@ -174,4 +175,11 @@ void printPairs(std::vector<std::pair<int, int>> &list)
         std::cout << "(" << list[i].first << "," << list[i].second << ")";
     }
     std::cout << "}" << std::endl;
+}
+
+void printBinary(uint8_t number) {
+    for(int i = sizeof(number); i >= 0; i--) {
+        printf("%d", BITCHECK(number, i));
+    }
+    printf("\n");
 }

@@ -53,6 +53,7 @@ void print2DVector(std::vector<std::vector<char>> &grid);
 void print2DVector(std::vector<std::vector<int>> &grid);
 void printPairs(std::vector<std::pair<int, int>> &list);
 void printArray(int arr[], int n);
+void printBinary(uint8_t number);
 
 template <typename T>
 void printTVector(const std::vector<T> &list)
